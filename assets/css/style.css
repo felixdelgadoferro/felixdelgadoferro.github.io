@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+.layout {
+  display: flex;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -79,11 +83,14 @@ a:hover {
 #sidebar {
   position: fixed;
   left: 0;
-  top: 0;
-  height: 100%;
-  width: 250px;
-  transform: translateX(-250px); /* cerrado */
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 260px;
+  background: #f9fafb;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
   transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
 #sidebar.open {
@@ -109,6 +116,13 @@ a:hover {
   margin-left: 260px;
   padding: 40px;
   transition: all 0.3s ease;
+}
+
+/* Contenido principal */
+main.content {
+  margin-left: 260px;
+  padding: 40px;
+  max-width: 900px;
 }
 
 h1 {
