@@ -34,8 +34,13 @@ if (darkToggle) {
 // ===============================
 const sidebar = document.querySelector("#sidebar");
 const toggleBtn = document.querySelector('#sidebar-toggle');
+const mainContent = document.querySelector('main');
 
-onst toggleBtn = document.querySelector('#sidebar-toggle');
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  sidebar.classList.toggle('closed');
+  mainContent.classList.toggle('expanded');
+});
 
 // Crear botón hamburguesa en móvil
 function createMenuToggle() {
