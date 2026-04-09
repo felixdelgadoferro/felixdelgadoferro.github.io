@@ -224,12 +224,22 @@ body.dark-mode hr {
   }
 
   #sidebar {
+    width: 220px; 
     transform: translateX(0);
   }
 
+  #sidebar.closed {
+    transform: translateX(-220px); /* cerrado */
+  }
+
   .main {
-    margin-left: 0;
+    margin-left: 220px;
+    transition: margin-left 0.3s ease;
     padding: 20px;
+  }
+
+  main.expanded {
+    margin-left: 0;
   }
 
   .menu-toggle {
