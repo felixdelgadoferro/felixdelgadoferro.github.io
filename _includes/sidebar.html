@@ -1,0 +1,25 @@
+<aside class="sidebar">
+
+  <div class="sidebar-header">
+    <h2>{{ site.title }}</h2>
+    <p class="subtitle">Academic Website</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="{{ '/research/' | relative_url }}"><i class="fas fa-flask"></i> Research</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}"><i class="fas fa-book"></i> Publications</a></li>
+      <li><a href="{{ '/teaching/' | relative_url }}"><i class="fas fa-chalkboard-teacher"></i> Teaching</a></li>
+      <li><a href="{{ '/curriculumvitae/' | relative_url }}"><i class="fas fa-user"></i> CV</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button id="dark-mode-toggle">
+      <i class="fas fa-moon"></i> Dark Mode
+    </button>
+  </div>
+
+</aside>
