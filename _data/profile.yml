@@ -1,0 +1,21 @@
+name: "Felix Delgado-Ferro"
+position: "PhD Student in Telecommunication Engineering"
+institution: "University of Granada"
+
+email: "your.email@ugr.es"
+
+address: |
+  ETSI Informática y Telecomunicación
+  University of Granada
+  Spain
+
+bio: >
+  PhD student at the Wireless and Multimedia Networking Lab.
+  Research focused on IoT, 5G/6G networks, and AI-driven optimization.
+
+research_interests:
+  - LPWAN and IoT systems (LoRaWAN)
+  - 5G/6G mobile networks
+  - AI/ML for networking
+  - Multipath and heterogeneous networks
+  - Low-latency communications
