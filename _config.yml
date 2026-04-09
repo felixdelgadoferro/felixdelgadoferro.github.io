@@ -2,9 +2,11 @@
 # CONFIGURACIÓN GENERAL
 # ===========================
 title: Felix Delgado-Ferro
-description: Personal academic website of Jorge Navarro-Ortiz, Associate Professor at University of Granada. Research on 4G/5G/6G networks, IoT, and telematics engineering.
-url: "https://YOUR_USERNAME.github.io" # Cambia YOUR_USERNAME por tu usuario GitHub
-baseurl: "" # Dejar vacío si publicas en https://YOUR_USERNAME.github.io
+description: |
+  Personal academic website of Jorge Navarro-Ortiz, Associate Professor at University of Granada. 
+  Research on 4G/5G/6G networks, IoT, and telematics engineering.
+url: "https://felixdelgadoferro.github.io" 
+baseurl: ""
 author: Felix Delgado-Ferro
 email: felixdelgado@ugr.es
 lang: en
@@ -13,7 +15,7 @@ lang: en
 # GITHUB PAGES
 # ===========================
 repository: https://github.com/felixdelgadoferro/felixdelgadoferro.github.io
-theme: minima # Puedes cambiar a otro theme compatible con GitHub Pages si quieres
+theme: minima 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -26,18 +28,17 @@ plugins:
 seo:
   type: person
   name: Felix Delgado-Ferro
-  email: felixdelgadoferro@ugr.es
+  email: felixdelgado@ugr.es
   twitter: YOUR_TWITTER_HANDLE
   linkedin: https://www.linkedin.com/in/YOUR_LINKEDIN/
   orcid: https://orcid.org/YOUR_ORCID
-  github: https://github.com/YOUR_USERNAME
+  github: https://github.com/felixdelgadoferro
   researchgate: https://www.researchgate.net/profile/YOUR_PROFILE
 
 # ===========================
 # DARK MODE
 # ===========================
 dark_mode: true
-# Puedes usar JS en tu sidebar para alternar dark/light mode
 
 # ===========================
 # NAVEGACIÓN (SIDEBAR)
@@ -47,7 +48,7 @@ nav:
     url: /
     icon: home
   - title: Curriculum Vitae
-    url: /curriculum-vitae/
+    url: /curriculumvitae/
     icon: user
   - title: Research
     url: /research/
@@ -67,7 +68,7 @@ nav:
 # ===========================
 pages:
   home: index.html
-  cv: curriculum-vitae/index.html
+  cv: curriculumvitae/index.html
   teaching: teaching/index.html
   research: research/index.html
   publications: publications/index.html
@@ -111,7 +112,9 @@ repos:
 contact:
   email: felixdelgado@ugr.es
  # phone: ""
-  office: "Centro de Investigación en Tecnologías de la Información y las Comunicaciones de la Universidad de Granada (CITIC-UGR), despacho D.1.7, Calle del Periodista Rafael Gómez Montero 2, 18014, Granada.
+  office: |
+    Centro de Investigación en Tecnologías de la Información y las Comunicaciones de la Universidad de Granada (CITIC-UGR),
+    despacho D.1.7, Calle del Periodista Rafael Gómez Montero 2, 18014, Granada.
 # ===========================
 # OTRAS OPCIONES
 # ===========================
