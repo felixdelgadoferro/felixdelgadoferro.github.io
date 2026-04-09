@@ -206,6 +206,19 @@ body.dark-mode hr {
 /* =========================
    RESPONSIVE
 ========================= */
+@media (max-width: 1023px) {
+  #sidebar {
+    width: 80%; /* casi toda la pantalla */
+    transform: translateX(-100%);
+  }
+  #sidebar.open {
+    transform: translateX(0);
+  }
+  main {
+    margin-left: 0; /* no margen en móvil */
+  }
+}
+
 @media (max-width: 768px) {
 
   .sidebar {
