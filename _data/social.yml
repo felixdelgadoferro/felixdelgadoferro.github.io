@@ -1,0 +1,15 @@
+- name: LinkedIn
+  icon: fab fa-linkedin
+  url: https://linkedin.com/
+
+- name: Google Scholar
+  icon: fas fa-graduation-cap
+  url: https://scholar.google.com/
+
+- name: ORCID
+  icon: fab fa-orcid
+  url: https://orcid.org/
+
+- name: GitHub
+  icon: fab fa-github
+  url: https://github.com/
