@@ -1,0 +1,23 @@
+- title: Home
+  url: /
+  icon: fas fa-home
+
+- title: Research
+  url: /research/
+  icon: fas fa-flask
+
+- title: Publications
+  url: /publications/
+  icon: fas fa-book
+
+- title: Teaching
+  url: /teaching/
+  icon: fas fa-chalkboard-teacher
+
+- title: Curriculum Vitae
+  url: /curriculumvitae/
+  icon: fas fa-user
+
+- title: Contact
+  url: /contact/
+  icon: fas fa-envelope
