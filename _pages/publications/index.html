@@ -7,37 +7,29 @@ permalink: /publications/
 <section class="fade-in">
   <h2>Publications</h2>
 
-  <div class="filter-container">
-    <label for="year-filter">Filter by year:</label>
-    <select id="year-filter" multiple>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-      <option value="2023">2023</option>
-      <option value="2022">2022</option>
-    </select>
+<div class="filter-container">
+  <label for="year-filter">Filter by year:</label>
+  <select id="year-filter">
+    <option value="all" selected>All</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+  </select>
+</div>
+
+<div id="publications-list">
+  <div class="publication-item" data-year="2025">
+    Paper 1: Advanced 6G LoRa systems...
   </div>
 
-  <div id="publications-list">
-
-    <div class="publication-item" data-year="2025">
-      <strong>Unleashing 5G Seamless Integration With TSN</strong><br>
-      IEEE Open Journal of the Communications Society, 2025
-    </div>
-
-    <div class="publication-item" data-year="2025">
-      <strong>Optimization Model for LoRaWAN</strong><br>
-      IEEE IoT Journal, 2025
-    </div>
-
-    <div class="publication-item" data-year="2024">
-      <strong>Combining 5G, Wi-Fi, and LiFi</strong><br>
-      Sensors, 2024
-    </div>
-
-    <div class="publication-item" data-year="2022">
-      <strong>LoRaWAN Architecture</strong><br>
-      Electronics, 2022
-    </div>
-
+  <div class="publication-item" data-year="2024">
+    Paper 2: AI for network optimization...
   </div>
+
+  <div class="publication-item" data-year="2023">
+    Paper 3: LPWAN and IoT research...
+  </div>
+</div>
+
 </section>

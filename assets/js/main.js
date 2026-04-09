@@ -91,3 +91,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ===============================
+// SIDEBAR ITEM ACTIVO
+// ===============================
+const sidebarLinks = document.querySelectorAll("#sidebar ul li a");
+
+sidebarLinks.forEach(link => {
+  // Comparar el href del link con la URL actual
+  if (link.href === window.location.href || link.href === window.location.pathname) {
+    link.classList.add("active");
+  }
+});

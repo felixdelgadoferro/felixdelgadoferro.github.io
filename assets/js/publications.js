@@ -1,19 +1,18 @@
-<div class="filter-container">
-  <label for="year-filter">Filter by year:</label>
-  <select id="year-filter" multiple>
-    <option value="2025">2025</option>
-    <option value="2024">2024</option>
-    <option value="2023">2023</option>
-    <option value="2022">2022</option>
-  </select>
-</div>
+// Filtrado dinámico de publicaciones
+const yearFilter = document.getElementById("year-filter");
+const publications = document.querySelectorAll(".publication-item");
 
-<div id="publications-list">
-  <div class="publication-item" data-year="2025">
-    Paper 1...
-  </div>
+if (yearFilter) {
+  yearFilter.addEventListener("change", () => {
+    const selected = yearFilter.value;
 
-  <div class="publication-item" data-year="2024">
-    Paper 2...
-  </div>
-</div>
+    publications.forEach(pub => {
+      const year = pub.getAttribute("data-year");
+      if (selected === "all" || year === selected) {
+        pub.style.display = "block";
+      } else {
+        pub.style.display = "none";
+      }
+    });
+  });
+}
