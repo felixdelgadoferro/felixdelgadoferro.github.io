@@ -32,7 +32,10 @@ if (darkToggle) {
 // ===============================
 // SIDEBAR RESPONSIVE
 // ===============================
-const sidebar = document.querySelector(".sidebar");
+const sidebar = document.querySelector("#sidebar");
+const toggleBtn = document.querySelector('#sidebar-toggle');
+
+onst toggleBtn = document.querySelector('#sidebar-toggle');
 
 // Crear botón hamburguesa en móvil
 function createMenuToggle() {
