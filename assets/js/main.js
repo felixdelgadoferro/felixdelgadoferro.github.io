@@ -1,5 +1,5 @@
 // ===============================
-// DARK MODE TOGGLE (persistente)
+// DARK MODE TOGGLE (PERSISTENTE)
 // ===============================
 const darkToggle = document.getElementById("dark-mode-toggle");
 
@@ -13,6 +13,7 @@ function setDarkMode(enabled) {
   }
 }
 
+// Cargar estado guardado
 document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("darkMode");
   if (saved === "true") {
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Evento toggle
 if (darkToggle) {
   darkToggle.addEventListener("click", () => {
     const isDark = document.body.classList.contains("dark-mode");
@@ -28,47 +30,57 @@ if (darkToggle) {
 }
 
 // ===============================
-// SIDEBAR TOGGLE MÓVIL
+// SIDEBAR RESPONSIVE
 // ===============================
-const sidebar = document.getElementById("sidebar");
+const sidebar = document.querySelector("#sidebar");
+const toggleBtn = document.querySelector('#sidebar-toggle');
+const mainContent = document.querySelector('main');
 
-// Crear botón hamburguesa solo en móvil
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  sidebar.classList.toggle('closed');
+  mainContent.classList.toggle('expanded');
+});
+
+// Crear botón hamburguesa en móvil
 function createMenuToggle() {
-  if (!document.querySelector(".menu-toggle")) {
-    const button = document.createElement("button");
-    button.classList.add("menu-toggle");
-    button.innerHTML = "☰";
-    document.body.appendChild(button);
+  const button = document.createElement("button");
+  button.innerHTML = "☰";
+  button.classList.add("menu-toggle");
+  document.body.appendChild(button);
 
-    button.addEventListener("click", () => {
-      sidebar.classList.toggle("open");
-    });
-  }
+  button.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
 }
 
-// Ejecutar al cargar y redimensionar
+// Solo en móvil
 function handleResponsiveMenu() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 768 && !document.querySelector(".menu-toggle")) {
     createMenuToggle();
-  } else {
-    // cerrar sidebar automáticamente en escritorio
-    sidebar.classList.remove("open");
   }
 }
 
+// Ejecutar al cargar y al redimensionar
 window.addEventListener("load", handleResponsiveMenu);
 window.addEventListener("resize", handleResponsiveMenu);
 
 // ===============================
-// ANIMACIONES FADE-IN EN SCROLL
+// ANIMACIONES SUAVES EN SCROLL
 // ===============================
 const faders = document.querySelectorAll(".fade-in");
 
-const appearOptions = { threshold: 0.1 };
+const appearOptions = {
+  threshold: 0.1
+};
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  observer
+) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
+
     entry.target.style.opacity = 1;
     entry.target.style.transform = "translateY(0)";
     observer.unobserve(entry.target);
@@ -76,6 +88,9 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 }, appearOptions);
 
 faders.forEach(fader => {
+  fader.style.opacity = 0;
+  fader.style.transform = "translateY(20px)";
+  fader.style.transition = "all 0.6s ease-out";
   appearOnScroll.observe(fader);
 });
 
