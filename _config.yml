@@ -1,0 +1,121 @@
+# ===========================
+# CONFIGURACIÓN GENERAL
+# ===========================
+title: Felix Delgado-Ferro
+description: Personal academic website of Jorge Navarro-Ortiz, Associate Professor at University of Granada. Research on 4G/5G/6G networks, IoT, and telematics engineering.
+url: "https://YOUR_USERNAME.github.io" # Cambia YOUR_USERNAME por tu usuario GitHub
+baseurl: "" # Dejar vacío si publicas en https://YOUR_USERNAME.github.io
+author: Felix Delgado-Ferro
+email: felixdelgado@ugr.es
+lang: en
+
+# ===========================
+# GITHUB PAGES
+# ===========================
+repository: https://github.com/felixdelgadoferro/felixdelgadoferro.github.io
+theme: minima # Puedes cambiar a otro theme compatible con GitHub Pages si quieres
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# ===========================
+# SEO y META
+# ===========================
+seo:
+  type: person
+  name: Felix Delgado-Ferro
+  email: felixdelgadoferro@ugr.es
+  twitter: YOUR_TWITTER_HANDLE
+  linkedin: https://www.linkedin.com/in/YOUR_LINKEDIN/
+  orcid: https://orcid.org/YOUR_ORCID
+  github: https://github.com/YOUR_USERNAME
+  researchgate: https://www.researchgate.net/profile/YOUR_PROFILE
+
+# ===========================
+# DARK MODE
+# ===========================
+dark_mode: true
+# Puedes usar JS en tu sidebar para alternar dark/light mode
+
+# ===========================
+# NAVEGACIÓN (SIDEBAR)
+# ===========================
+nav:
+  - title: Home
+    url: /
+    icon: home
+  - title: Curriculum Vitae
+    url: /curriculum-vitae/
+    icon: user
+  - title: Research
+    url: /research/
+    icon: flask
+  - title: Teaching
+    url: /teaching/
+    icon: book
+  - title: Publications
+    url: /publications/
+    icon: file-text
+  - title: Contact
+    url: /contact/
+    icon: mail
+
+# ===========================
+# PÁGINAS DE LA WEB
+# ===========================
+pages:
+  home: index.html
+  cv: curriculum-vitae/index.html
+  teaching: teaching/index.html
+  research: research/index.html
+  publications: publications/index.html
+  contact: contact/index.html
+
+# ===========================
+# PUBLICACIONES
+# ===========================
+publications:
+  sort: desc # más reciente a menos
+  filter: true
+  filter_multiple: true
+
+# ===========================
+# JEKYLL PAGINATION
+# ===========================
+paginate: 10
+paginate_path: "/page:num/"
+
+# ===========================
+# ARCHIVOS ESTÁTICOS
+# ===========================
+include:
+  - _pages
+  - _publications
+  - assets
+  - js
+  - css
+  - images
+
+# ===========================
+# REPOSITORIOS
+# ===========================
+repos:
+  github: https://github.com/felixdelgadoferro
+  bitbucket: https://bitbucket.org/YOUR_USERNAME
+
+# ===========================
+# CONTACTO
+# ===========================
+contact:
+  email: felixdelgado@ugr.es
+ # phone: ""
+  office: "Centro de Investigación en Tecnologías de la Información y las Comunicaciones de la Universidad de Granada (CITIC-UGR), despacho D.1.7, Calle del Periodista Rafael Gómez Montero 2, 18014, Granada.
+# ===========================
+# OTRAS OPCIONES
+# ===========================
+timezone: Europe/Madrid
+markdown: kramdown
+kramdown:
+  input: GFM
