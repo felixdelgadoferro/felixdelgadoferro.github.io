@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="{{ page.body_class }}">
 {% include head.html %}
-
 <body>
 
-  {% include sidebar.html %}
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="nav-brand" href="{{ '/' | relative_url }}">Felix Delgado-Ferro</a>
 
-  <div class="page-wrapper">
-    <main class="main">
-      {{ content }}
-    </main>
+      <!-- Desktop nav -->
+      <nav class="nav-links" id="nav-links">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}class="active"{% endif %}>Research</a>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>Publications</a>
+        <a href="{{ '/teaching/' | relative_url }}" {% if page.url contains '/teaching' %}class="active"{% endif %}>Teaching</a>
+        <a href="{{ '/curriculumvitae/' | relative_url }}" {% if page.url contains '/curriculumvitae' %}class="active"{% endif %}>CV</a>
+        <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a>
+      </nav>
 
-    <footer class="footer">
-      <p>© {{ site.time | date: "%Y" }} Felix Delgado-Ferro &nbsp;·&nbsp; PhD Student, University of Granada &nbsp;·&nbsp; Built with Jekyll &amp; GitHub Pages</p>
-    </footer>
-  </div>
+      <div class="nav-actions">
+        <button id="dark-mode-toggle" class="dm-btn" title="Toggle dark mode">
+          <span id="dm-icon">☾</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <nav class="nav-mobile" id="nav-mobile">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}class="active"{% endif %}>Research</a>
+      <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>Publications</a>
+      <a href="{{ '/teaching/' | relative_url }}" {% if page.url contains '/teaching' %}class="active"{% endif %}>Teaching</a>
+      <a href="{{ '/curriculumvitae/' | relative_url }}" {% if page.url contains '/curriculumvitae' %}class="active"{% endif %}>CV</a>
+      <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© {{ site.time | date: "%Y" }} Felix Delgado-Ferro</span>
+      <span class="footer-sep">·</span>
+      <span>PhD Student · University of Granada</span>
+      <span class="footer-sep">·</span>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/f%C3%A9lix-delgado-ferro-71b180aa/" target="_blank" title="LinkedIn">in</a>
+        <a href="https://scholar.google.es/citations?user=jm6kFfUAAAAJ" target="_blank" title="Google Scholar">GS</a>
+        <a href="https://orcid.org/0000-0003-3494-9487" target="_blank" title="ORCID">iD</a>
+        <a href="https://www.researchgate.net/profile/Felix-Delgado-Ferro" target="_blank" title="ResearchGate">RG</a>
+      </div>
+    </div>
+  </footer>
 
   {% include scripts.html %}
-
 </body>
 </html>

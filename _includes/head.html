@@ -3,30 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
-
   <title>{% if page.title == "Home" %}{{ site.title }} — Academic Website{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-
-  <!-- Fonts -->
+  <!-- Google Fonts — served from Google, not cdnjs, rarely blocked -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome via jsDelivr (less aggressive tracking prevention than cdnjs) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <!-- Dark mode FOUC prevention -->
-  <script>
-    if (localStorage.getItem('darkMode') === 'true') {
-      document.documentElement.style.colorScheme = 'dark';
-    }
-  </script>
+  <!-- Prevent dark mode flash -->
+  <script>if(localStorage.getItem('darkMode')==='true'){document.documentElement.classList.add('dark-mode-pre');}</script>
 </head>
