@@ -1,94 +1,77 @@
 // ===============================
-// DARK MODE TOGGLE (persistente)
+// NAVBAR RESPONSIVE
 // ===============================
-const darkToggle = document.getElementById("dark-mode-toggle");
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
 
-function setDarkMode(enabled) {
-  if (enabled) {
-    document.body.classList.add("dark-mode");
-    localStorage.setItem("darkMode", "true");
-  } else {
-    document.body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "false");
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+    });
   }
-}
+});
 
-document.addEventListener("DOMContentLoaded", () => {
+// ===============================
+// DARK MODE TOGGLE (OPCIONAL)
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+  const darkToggle = document.getElementById("dark-mode-toggle");
+
+  function setDarkMode(enabled) {
+    if (enabled) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "true");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "false");
+    }
+  }
+
+  // Cargar estado guardado
   const saved = localStorage.getItem("darkMode");
   if (saved === "true") {
     document.body.classList.add("dark-mode");
   }
-});
 
-if (darkToggle) {
-  darkToggle.addEventListener("click", () => {
-    const isDark = document.body.classList.contains("dark-mode");
-    setDarkMode(!isDark);
-  });
-}
-
-// ===============================
-// SIDEBAR TOGGLE MÓVIL
-// ===============================
-const sidebar = document.getElementById("sidebar");
-
-// Crear botón hamburguesa solo en móvil
-function createMenuToggle() {
-  if (!document.querySelector(".menu-toggle")) {
-    const button = document.createElement("button");
-    button.classList.add("menu-toggle");
-    button.innerHTML = "☰";
-    document.body.appendChild(button);
-
-    button.addEventListener("click", () => {
-      sidebar.classList.toggle("open");
+  // Evento toggle
+  if (darkToggle) {
+    darkToggle.addEventListener("click", () => {
+      const isDark = document.body.classList.contains("dark-mode");
+      setDarkMode(!isDark);
     });
   }
-}
-
-// Ejecutar al cargar y redimensionar
-function handleResponsiveMenu() {
-  if (window.innerWidth <= 768) {
-    createMenuToggle();
-  } else {
-    // cerrar sidebar automáticamente en escritorio
-    sidebar.classList.remove("open");
-  }
-}
-
-window.addEventListener("load", handleResponsiveMenu);
-window.addEventListener("resize", handleResponsiveMenu);
+});
 
 // ===============================
-// NAVBAR RESPONSIVE
+// ANIMACIONES SUAVES EN SCROLL
 // ===============================
-const navToggle = document.getElementById("nav-toggle");
-const navMenu = document.getElementById("nav-menu");
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll(".fade-in");
 
-if (navToggle && navMenu) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+  const appearOptions = {
+    threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function (
+    entries,
+    observer
+  ) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    fader.style.opacity = 0;
+    fader.style.transform = "translateY(20px)";
+    fader.style.transition = "all 0.6s ease-out";
+    appearOnScroll.observe(fader);
   });
-}
-
-// ===============================
-// ANIMACIONES FADE-IN EN SCROLL
-// ===============================
-const faders = document.querySelectorAll(".fade-in");
-
-const appearOptions = { threshold: 0.1 };
-
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.style.opacity = 1;
-    entry.target.style.transform = "translateY(0)";
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
 });
 
 // ===============================
@@ -102,16 +85,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: "smooth" });
     }
   });
-});
-
-// ===============================
-// SIDEBAR ITEM ACTIVO
-// ===============================
-const sidebarLinks = document.querySelectorAll("#sidebar ul li a");
-
-sidebarLinks.forEach(link => {
-  // Comparar el href del link con la URL actual
-  if (link.href === window.location.href || link.href === window.location.pathname) {
-    link.classList.add("active");
-  }
 });
