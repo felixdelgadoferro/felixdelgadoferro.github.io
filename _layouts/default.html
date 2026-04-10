@@ -5,11 +5,17 @@
 
 <body>
 
-  {% include header.html %}
+  {% include sidebar.html %}
 
-  <main class="main">
-    {{ content }}
-  </main>
+  <div class="page-wrapper">
+    <main class="main">
+      {{ content }}
+    </main>
+
+    <footer class="footer">
+      <p>© {{ site.time | date: "%Y" }} Felix Delgado-Ferro &nbsp;·&nbsp; PhD Student, University of Granada &nbsp;·&nbsp; Built with Jekyll &amp; GitHub Pages</p>
+    </footer>
+  </div>
 
   {% include scripts.html %}
 

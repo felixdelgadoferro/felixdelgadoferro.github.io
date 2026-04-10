@@ -1,13 +1,78 @@
-<nav id="sidebar">
-  <h2>{{ site.title }}</h2>
-  <ul>
-    {% for item in site.nav %}
+<!-- Mobile Header -->
+<div class="mobile-header">
+  <span class="mobile-logo">Felix Delgado-Ferro</span>
+  <button class="hamburger" id="sidebar-toggle" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+
+<!-- Overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Sidebar -->
+<aside id="sidebar">
+  <div class="sidebar-profile">
+    <div class="sidebar-avatar">FD</div>
+    <div class="sidebar-name">Felix Delgado-Ferro</div>
+    <div class="sidebar-role">PhD Student · Telecom Engineering<br>University of Granada</div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
       <li>
-        <a href="{{ item.url }}">
-          {% if item.icon %}<i class="icon-{{ item.icon }}"></i>{% endif %}
-          {{ item.title }}
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>
+          <i class="fas fa-home"></i> Home
         </a>
       </li>
-    {% endfor %}
-  </ul>
-</nav>
+      <li>
+        <a href="{{ '/research/' | relative_url }}" {% if page.url contains '/research' %}class="active"{% endif %}>
+          <i class="fas fa-flask"></i> Research
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}>
+          <i class="fas fa-book-open"></i> Publications
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/teaching/' | relative_url }}" {% if page.url contains '/teaching' %}class="active"{% endif %}>
+          <i class="fas fa-chalkboard-teacher"></i> Teaching
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/curriculumvitae/' | relative_url }}" {% if page.url contains '/curriculumvitae' %}class="active"{% endif %}>
+          <i class="fas fa-id-card"></i> Curriculum Vitae
+        </a>
+      </li>
+      <li>
+        <a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div class="sidebar-social">
+      <a href="https://www.linkedin.com/in/f%C3%A9lix-delgado-ferro-71b180aa/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://scholar.google.es/citations?user=jm6kFfUAAAAJ" target="_blank" title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+      <a href="https://orcid.org/0000-0003-3494-9487" target="_blank" title="ORCID">
+        <i class="fab fa-orcid"></i>
+      </a>
+      <a href="https://www.researchgate.net/profile/Felix-Delgado-Ferro" target="_blank" title="ResearchGate">
+        <i class="fab fa-researchgate"></i>
+      </a>
+      <a href="https://github.com/felixdelgadoferro" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <button class="sidebar-toggle-btn" id="dark-mode-toggle">
+      <i class="fas fa-moon" id="dm-icon"></i>
+      <span id="dm-label">Dark mode</span>
+    </button>
+  </div>
+</aside>
