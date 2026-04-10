@@ -1,11 +1,25 @@
-<header>
-  <!-- Logo / título -->
-  <div class="header-left">
-    <a href="{{ '/' | relative_url }}" class="logo">{{ site.title }}</a>
-  </div>
+<header class="navbar">
+  <div class="nav-container">
 
-  <!-- Dark mode toggle -->
-  <div class="header-right">
-    <button id="dark-mode-toggle">🌓</button>
+    <!-- Nombre / Logo -->
+    <div class="nav-logo">
+      <a href="/">Felix Delgado-Ferro</a>
+    </div>
+
+    <!-- Botón móvil -->
+    <button id="nav-toggle" class="nav-toggle">
+      ☰
+    </button>
+
+    <!-- Menú -->
+    <nav id="nav-menu" class="nav-menu">
+      <a href="/">Home</a>
+      <a href="/curriculumvitae/">CV</a>
+      <a href="/research/">Research</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/publications/">Publications</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
   </div>
 </header>

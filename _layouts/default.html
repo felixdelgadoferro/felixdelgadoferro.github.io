@@ -5,17 +5,11 @@
 
 <body>
 
-  <!-- Header fijo -->
   {% include header.html %}
 
-  <!-- Layout principal: sidebar + contenido -->
-  <div class="layout">
-    {% include sidebar.html %}
-
-    <main class="content">
-      {{ content }}
-    </main>
-  </div>
+  <main class="main">
+    {{ content }}
+  </main>
 
   {% include scripts.html %}
 

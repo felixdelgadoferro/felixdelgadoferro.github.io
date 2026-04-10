@@ -60,6 +60,18 @@ window.addEventListener("load", handleResponsiveMenu);
 window.addEventListener("resize", handleResponsiveMenu);
 
 // ===============================
+// NAVBAR RESPONSIVE
+// ===============================
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+}
+
+// ===============================
 // ANIMACIONES FADE-IN EN SCROLL
 // ===============================
 const faders = document.querySelectorAll(".fade-in");
