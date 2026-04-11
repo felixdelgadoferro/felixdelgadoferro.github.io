@@ -115,7 +115,7 @@ title: Home
 </div> 
 -->
 
-
+<!--
 <div class="landing-page">
 
   <div class="landing-avatar">
@@ -165,3 +165,60 @@ title: Home
   </div>
 
 </div>
+-- >
+
+---
+layout: default
+title: Home
+---
+
+<!-- HERO — pantalla completa -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <p class="hero-greeting">Hi, I am</p>
+    <h1 class="hero-name">Felix</h1>
+    <div class="hero-typewriter">
+      <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+    </div>
+    <div class="hero-social">
+      <a href="mailto:felixdelgado@ugr.es" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://orcid.org/0000-0003-3494-9487" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://scholar.google.es/citations?user=jm6kFfUAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://www.linkedin.com/in/f%C3%A9lix-delgado-ferro-71b180aa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.researchgate.net/profile/Felix-Delgado-Ferro" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+      <a href="https://github.com/felixdelgadoferro" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <a href="#about" class="hero-scroll-hint">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-photo">
+      <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Felix Delgado-Ferro">
+    </div>
+    <div class="about-text">
+      <div class="section-label">About</div>
+      <h2>Felix Delgado-Ferro</h2>
+      <p class="about-role">PhD Student in Telecommunication Engineering</p>
+      <p>
+        I received the B.Sc. and M.Sc. degrees in Telecommunication Engineering from the University of Granada, Spain, in 2020 and 2022. 
+        I is currently pursuing the Doctoral degree with the <strong>Wireless and Multimedia Networking Lab</strong> Research Group,
+        Department of Signal Theory, Telematics, and Communications. In 2023, I was a visiting doctoral student under the supervision of Dr. Özgü Alay
+        with <strong>Simula Research Laboratory, University of Oslo</strong>, Norway.
+      </p>
+      <p>
+        My current research interests include multipath protocols, heterogeneous networks, and optimization techniques for IoT, 5G, and 6G networks.
+      </p>
+      <div class="about-links">
+        <a href="/research/">Research</a>
+        <a href="/publications/">Publications</a>
+        <a href="/curriculumvitae/">CV</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
