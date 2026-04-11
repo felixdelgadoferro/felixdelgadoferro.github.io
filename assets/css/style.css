@@ -628,8 +628,8 @@ body.dark-mode .social-links-contact li a:hover { color: #f0b429; }
 }
 
 .landing-avatar {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 1.5rem;
@@ -679,7 +679,7 @@ body.dark-mode .social-links-contact li a:hover { color: #f0b429; }
 }
 
 .landing-bio {
-  max-width: 480px;
+  max-width: 520px;
   font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.65;
