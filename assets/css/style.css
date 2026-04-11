@@ -624,12 +624,9 @@ body.dark-mode .social-links-contact li a:hover { color: #f0b429; }
   align-items: center;
   justify-content: center;
   position: relative;
-  /* Empuja el contenido por debajo del navbar */
-  margin-top: calc(-1 * var(--navbar-h));
-  padding-top: var(--navbar-h);
+  padding: 0 1.5rem;
 }
 
-/* Fondo con patrón sutil */
 .hero-section::before {
   content: '';
   position: absolute;
@@ -812,4 +809,25 @@ body.dark-mode .about-links a:hover { color: var(--accent); }
   }
   .about-text { text-align: center; }
   .about-links { justify-content: center; }
+}
+
+
+/* Navbar transparente en home — se fusiona con el hero */
+body.page-home .navbar {
+  background: transparent;
+  box-shadow: none;
+}
+
+body.page-home .navbar:hover {
+  background: rgba(15, 35, 64, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+/* Fix section-label en todas las páginas */
+.home-section,
+.pub-year-group,
+.about-text,
+.cv-section,
+.fade-in {
+  overflow: visible;
 }

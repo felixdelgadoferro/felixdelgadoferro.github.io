@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="{{ page.body_class }}">
 {% include head.html %}
-<body>
+<body{% if page.url == '/' %} class="page-home"{% endif %}>
 
   <header class="navbar">
     <div class="nav-inner">
