@@ -632,17 +632,19 @@ body.dark-mode .social-links-contact li a:hover { color: #f0b429; }
   height: 140px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
   border: 3px solid var(--border);
   box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-  position: relative;
+  flex-shrink: 0;
 }
 
 .landing-avatar img {
-  width: 100%;
-  height: 100%;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
+  object-position: center;
   display: block;
+  border-radius: 50%;
 }
 
 .landing-avatar-placeholder {
