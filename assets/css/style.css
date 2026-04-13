@@ -24,9 +24,15 @@
   --ease:         0.22s ease;
 }
 
+/* Dark mode por defecto desde head.html */
+html[style*="color-scheme: dark"] body {
+  background: #0d1117;
+  color: #cdd5e0;
+}
+
 /* Dark mode */
 :root.dark-mode-pre,
-body.dark-mode {
+body.dark-mode, html.dark {
   --navy:         #0c1a2e;
   --navy-mid:     #112240;
   --navy-light:   #3a6fd8;

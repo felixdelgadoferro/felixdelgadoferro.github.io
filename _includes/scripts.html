@@ -1,5 +1,4 @@
 <script>
-// Dark mode — default ON, persiste entre recargas
 (function(){
   var btn  = document.getElementById('dark-mode-toggle');
   var icon = document.getElementById('dm-icon');
@@ -10,14 +9,27 @@
     if(icon) icon.textContent = dark ? '☀' : '☾';
   }
 
-  // Si nunca se ha guardado preferencia, dark por defecto
-  var saved = localStorage.getItem('darkMode');
-  apply(saved === null ? true : saved === 'true');
+  // Lee el valor guardado (ya inicializado en head.html)
+  apply(localStorage.getItem('darkMode') !== 'false');
 
   if(btn) btn.addEventListener('click', function(){
     apply(!document.body.classList.contains('dark-mode'));
   });
 })();
+
+
+// Aplica dark mode ANTES de renderizar — evita flash y es persistente
+(function(){
+  var saved = localStorage.getItem('darkMode');
+  // Si nunca se ha guardado, dark mode por defecto
+  if(saved === null) localStorage.setItem('darkMode', 'true');
+  if(localStorage.getItem('darkMode') === 'true'){
+    document.documentElement.style.cssText = 'color-scheme: dark;';
+    document.addEventListener('DOMContentLoaded', function(){
+      document.body.classList.add('dark-mode');
+    });
+  }
+  })();
 
 // Mobile hamburger
 (function(){
@@ -32,6 +44,9 @@
     a.addEventListener('click', function(){ mobile.classList.remove('open'); });
   });
 })();
+
+
+
 
 // Fade-in on scroll
 (function(){
