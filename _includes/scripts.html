@@ -24,19 +24,6 @@
 })();
 
 
-// Aplica dark mode ANTES de renderizar — evita flash y es persistente
-(function(){
-  var saved = localStorage.getItem('darkMode');
-  // Si nunca se ha guardado, dark mode por defecto
-  if(saved === null) localStorage.setItem('darkMode', 'true');
-  if(localStorage.getItem('darkMode') === 'true'){
-    document.documentElement.style.cssText = 'color-scheme: dark;';
-    document.addEventListener('DOMContentLoaded', function(){
-      document.body.classList.add('dark-mode');
-    });
-  }
-  })();
-
 // Mobile hamburger
 (function(){
   var btn    = document.getElementById('hamburger');
