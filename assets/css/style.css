@@ -30,9 +30,15 @@ html[style*="color-scheme: dark"] body {
   color: #cdd5e0;
 }
 
+/* Dark mode aplicado desde <html> para evitar flash en cualquier página */
+html.dark-mode body {
+  background: var(--bg);
+  color: var(--text);
+}
+
 /* Dark mode */
 :root.dark-mode-pre,
-body.dark-mode, html.dark {
+body.dark-mode, html.dark-mode body {
   --navy:         #0c1a2e;
   --navy-mid:     #112240;
   --navy-light:   #3a6fd8;
@@ -67,7 +73,7 @@ h1, h2, h3, h4 {
   line-height: 1.25;
   transition: color var(--ease);
 }
-body.dark-mode h1,
+body.dark-mode h1, html.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
 body.dark-mode h4 { color: #e2e8f5; }
@@ -93,7 +99,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; transi
   transition: background var(--ease);
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
-body.dark-mode .navbar { background: #0c1a2e; }
+body.dark-mode .navbar, html.dark-mode .navbar { background: #0c1a2e; }
 
 .nav-inner {
   max-width: 1100px;
@@ -397,7 +403,7 @@ body.dark-mode .interests-list li:hover { color: #f0b429; }
   border: 1px solid rgba(200,134,10,0.25);
   font-style: normal;
 }
-body.dark-mode .pub-quartile {
+body.dark-mode .pub-quartile, html.dark-mode .pub-quartile{
   background: rgba(240,180,41,0.12);
   color: #f0b429;
   border-color: rgba(240,180,41,0.3);
