@@ -55,13 +55,24 @@ permalink: /research/
       <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
     </button>
     <div class="project-body">
-      <div class="project-detail"><span class="detail-label">Full title</span> {{ p.title }}</div>
-      <div class="project-detail"><span class="detail-label">Role</span> {{ p.role }}</div>
-      <div class="project-detail"><span class="detail-label">Period</span> {{ p.period }}</div>
+      <div class="project-detail"><span class="detail-label">Title</span> {{ p.title }}</div>
+      {% if p.code %}
+      <div class="project-detail"><span class="detail-label">Code</span> {{ p.code }}, {{ p.funder }}</div>
+      {% endif %}
+      <div class="project-detail"><span class="detail-label">IP</span> {{ p.pis }}</div>
+      <div class="project-detail"><span class="detail-label">Period</span> {{ p.start }} – {{ p.end }}</div>
+      {% if p.budget %}
+      <div class="project-detail"><span class="detail-label">Budget</span> {{ p.budget }}</div>
+      {% endif %}
+      {% if p.link %}
+      <div class="project-detail"><span class="detail-label">Link</span>
+        <a href="{{ p.link }}" target="_blank">Project page</a>
+      </div>
+      {% endif %}
       {% if p.cert %}
       <div class="project-detail"><span class="detail-label">Certificate</span>
         <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
-          <i class="fas fa-file-pdf"></i> Certificate <span class="pdf-placeholder">(pending)</span>
+          <i class="fas fa-file-pdf"></i> <span class="pdf-placeholder"> </span>
         </a>
       </div>
       {% endif %}
@@ -86,10 +97,9 @@ permalink: /research/
     <div class="project-body">
       <div class="project-detail"><span class="detail-label">Title</span> {{ p.title }}</div>
       {% if p.code %}
-      <div class="project-detail"><span class="detail-label">Code</span> {{ p.code }}</div>
+      <div class="project-detail"><span class="detail-label">Code</span> {{ p.code }}, {{ p.funder }}</div>
       {% endif %}
-      <div class="project-detail"><span class="detail-label">Funding</span> {{ p.funder }}</div>
-      <div class="project-detail"><span class="detail-label">IPs</span> {{ p.pis }}</div>
+      <div class="project-detail"><span class="detail-label">IP</span> {{ p.pis }}</div>
       <div class="project-detail"><span class="detail-label">Period</span> {{ p.start }} – {{ p.end }}</div>
       {% if p.budget %}
       <div class="project-detail"><span class="detail-label">Budget</span> {{ p.budget }}</div>
@@ -102,7 +112,7 @@ permalink: /research/
       {% if p.cert %}
       <div class="project-detail"><span class="detail-label">Certificate</span>
         <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
-          <i class="fas fa-file-pdf"></i> Certificate <span class="pdf-placeholder">(pending)</span>
+          <i class="fas fa-file-pdf"></i> <span class="pdf-placeholder"> </span>
         </a>
       </div>
       {% endif %}
