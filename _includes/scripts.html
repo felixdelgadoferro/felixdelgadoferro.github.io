@@ -51,8 +51,13 @@
   });
 })();
 
-
-
+// Project Cards
+function toggleProject(btn) {
+  var body = btn.nextElementSibling;
+  var isOpen = btn.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
 
 // Fade-in on scroll
 (function(){

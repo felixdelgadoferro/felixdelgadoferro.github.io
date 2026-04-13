@@ -104,3 +104,14 @@ participation:
     end: "06/2022"
     budget: "32,125 €"
     cert: "cert_artemis.pdf"
+
+
+    # - acronym: "NUEVO-PROYECTO"
+    #title: "Título completo del proyecto"
+    #code: "REF-2026-XXX"
+    #funder: "Organismo financiador"
+    #pis: "F. Delgado-Ferro"
+    #start: "01/2026"
+    #end: "12/2028"
+    #budget: "150,000 €"
+    #cert: "cert_nuevo.pdf" 

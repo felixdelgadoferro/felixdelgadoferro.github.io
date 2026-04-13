@@ -867,3 +867,117 @@ body.page-home .navbar:hover {
 .fade-in {
   overflow: visible;
 }
+
+
+/* ============================================================
+   PROJECT CARDS (expandibles)
+============================================================ */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+  transition: box-shadow var(--ease);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.project-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--ease);
+}
+
+.project-header:hover {
+  background: var(--accent-bg);
+}
+
+.project-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.project-acronym {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.project-title-short {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.project-toggle-icon {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: transform var(--ease);
+}
+
+.project-header.open .project-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.project-body {
+  display: none;
+  padding: 0.75rem 1.1rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-body.open {
+  display: block;
+}
+
+.project-detail {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.84rem;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 120px;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--navy-light);
+  transition: color var(--ease);
+}
+.pdf-btn:hover { color: var(--accent); }
+.pdf-btn i { color: #e53e3e; }
+
+.pdf-placeholder {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
