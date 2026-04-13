@@ -875,12 +875,14 @@ body.page-home .navbar:hover {
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 4px solid var(--navy-mid);
   border-radius: var(--radius);
   margin-bottom: 0.6rem;
-  transition: box-shadow var(--ease);
+  transition: all var(--ease);
 }
 
 .project-card:hover {
+  border-left-color: var(--accent);
   box-shadow: var(--shadow-md);
 }
 
