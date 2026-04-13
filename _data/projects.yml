@@ -1,9 +1,12 @@
 leadership:
   - acronym: "MPTCP-DRL"
     title: "Development of a multi-technology scheduler based on Multi-Path TCP using Deep Reinforcement Learning"
-    role: "Principal Investigator"
-    period: "2024"
-    cert: "cert_mptcp_drl.pdf"
+    code: "CITIC-2024-04"
+    funder: "Research Centre of Information and Communications Technologies (CITIC) of the University of Granada"
+    pis: "F. Delgado-Ferro"
+    start: "05/2024"
+    end: "12/2024"
+    cert: "cert_citic_2024.pdf"
 
   - acronym: "MAJARI"
     title: "MAJARI: Machine Learning Approaches for Joint Analysis in pediatric cancer"
