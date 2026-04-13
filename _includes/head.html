@@ -16,9 +16,12 @@
   <!-- Site CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <!-- Prevent dark mode flash -->
-  <script>if(localStorage.getItem('darkMode')==='true'){document.documentElement.classList.add('dark-mode-pre');}</script>
-
+  <script>
+  var dm = localStorage.getItem('darkMode');
+  if(dm === null || dm === 'true'){
+    document.documentElement.classList.add('dark-mode-pre');
+  }
+</script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/img/favicon.png' | relative_url }}">

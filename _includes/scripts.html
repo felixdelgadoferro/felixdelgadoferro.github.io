@@ -1,19 +1,22 @@
 <script>
-// Dark mode
+// Dark mode — default ON, persiste entre recargas
 (function(){
-  var btn   = document.getElementById('dark-mode-toggle');
-  var icon  = document.getElementById('dm-icon');
-  var saved = localStorage.getItem('darkMode') === 'false';
+  var btn  = document.getElementById('dark-mode-toggle');
+  var icon = document.getElementById('dm-icon');
 
   function apply(dark){
     document.body.classList.toggle('dark-mode', dark);
-    document.documentElement.classList.remove('dark-mode-pre');
-    localStorage.setItem('darkMode', dark);
+    localStorage.setItem('darkMode', dark ? 'true' : 'false');
     if(icon) icon.textContent = dark ? '☀' : '☾';
   }
 
-  apply(saved);
-  if(btn) btn.addEventListener('click', function(){ apply(!document.body.classList.contains('dark-mode')); });
+  // Si nunca se ha guardado preferencia, dark por defecto
+  var saved = localStorage.getItem('darkMode');
+  apply(saved === null ? true : saved === 'true');
+
+  if(btn) btn.addEventListener('click', function(){
+    apply(!document.body.classList.contains('dark-mode'));
+  });
 })();
 
 // Mobile hamburger

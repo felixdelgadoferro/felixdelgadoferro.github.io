@@ -642,8 +642,8 @@ body.dark-mode .social-links-contact li a:hover { color: #f0b429; }
 }
 
 .hero-avatar {
-  width: 170px;
-  height: 170px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 1.25rem;
@@ -664,8 +664,9 @@ body.dark-mode .hero-section {
 }
 
 .hero-inner {
+  max-width: 760px;
+  width: 100%;
   text-align: center;
-  padding: 2rem 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -754,16 +755,17 @@ body.dark-mode .hero-section {
 ============================================================ */
 .about-section {
   width: 100%;
-  padding: 4rem 3.5rem;
+  padding: 4rem 0;
   background: var(--bg);
   transition: background var(--ease);
   box-sizing: border-box;
 }
 
 .about-inner {
-  max-width: 100%;
+  max-width: 760px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 2rem;
 }
 
 .about-photo {
