@@ -7,11 +7,20 @@ permalink: /research/
 <div class="fade-in">
   <h1>Research</h1>
   <p>
-    Member of the <strong>Wireless and Multimedia Networking Lab (TIC-235)</strong> at the
-    University of Granada, working on IoT, LPWAN, and beyond 5G/6G networks.
+    I am a member of the <a href="https://wimunet.ugr.es" target="_blank"><strong>Wireless and Multimedia Networking Lab (TIC-235)</strong></a>,
+    part of the Andalusian Scientific Information System (S.I.C.A.), at the University of Granada.
+    My research activity is focused on wireless networks and mobile communications,
+    with particular interest in QoS/QoE, IoT, and beyond 5G/6G systems.
   </p>
   <p>
-    In 2023, I was a visiting doctoral researcher at
+    I am currently pursuing my Ph.D. in Telecommunication Engineering at the University of Granada,
+    under the supervision of Prof. <a href="https://scholar.google.com/citations?user=9TTs4XQAAAAJ&hl=es" target="_blank">Juan M. Lopez-Soler</a> and Prof. <a href="https://wpd.ugr.es/~jorgenavarro/" target="_blank">Jorge Navarro-Ortiz</a>.
+    I currently hold one period of three years of recognized research activity
+    (un trienio de investigación) by the Ministry of Education and Science.
+  </p>
+  <p>
+    In 2023, I was a visiting doctoral student under the supervision of
+    <a href="https://scholar.google.com/citations?user=sevISiQAAAAJ&hl=en" target="_blank">Dr. Özgü Alay</a> at
     <strong>Simula Research Laboratory, University of Oslo</strong>, Norway.
   </p>
 </div>
@@ -24,10 +33,10 @@ permalink: /research/
     <li>LPWAN &amp; IoT (LoRaWAN)</li>
     <li>5G / 6G Mobile Networks</li>
     <li>SDN / NFV &amp; Network Slicing</li>
-    <li>Multipath Protocols</li>
+    <li>Multipath Protocols (MPTCP &amp; MPQUIC)</li>
     <li>Heterogeneous Networks</li>
     <li>AI/ML for Network Optimization</li>
-    <li>Low-latency Communications</li>
+    <li>Low-latency &amp; Deterministic Communications</li>
     <li>Non-terrestrial Networks</li>
   </ul>
 </div>
@@ -36,20 +45,72 @@ permalink: /research/
 
 <div class="home-section fade-in">
   <div class="section-label">Project Leadership</div>
-  <ul class="project-list">
-    <li>Multi-technology scheduler based on Multi-Path TCP using Deep Reinforcement Learning (2024)</li>
-    <li>MAJARI: Machine Learning Approaches for Joint Analysis in pediatric cancer (2024)</li>
-  </ul>
+
+  {% for p in site.data.projects.leadership %}
+  <div class="project-card">
+    <button class="project-header" onclick="toggleProject(this)">
+      <div class="project-header-left">
+        <span class="project-acronym">{{ p.acronym }}</span>
+        <span class="project-title-short">{{ p.title }}</span>
+      </div>
+      <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+    <div class="project-body">
+      <div class="project-detail"><span class="detail-label">Full title</span> {{ p.title }}</div>
+      <div class="project-detail"><span class="detail-label">Role</span> {{ p.role }}</div>
+      <div class="project-detail"><span class="detail-label">Period</span> {{ p.period }}</div>
+      {% if p.cert %}
+      <div class="project-detail"><span class="detail-label">Certificate</span>
+        <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
+          <i class="fas fa-file-pdf"></i> Certificate <span class="pdf-placeholder">(pending)</span>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
 </div>
+
+<hr>
 
 <div class="home-section fade-in">
   <div class="section-label">Participation in Research Projects</div>
-  <ul class="project-list">
-    <li><strong>6G-LoRaGRAN</strong> &nbsp;&middot;&nbsp; 2023&ndash;2024</li>
-    <li><strong>6G-INSPIRE</strong> &nbsp;&middot;&nbsp; 2023&ndash;2026</li>
-    <li><strong>6G-CHRONOS</strong> &nbsp;&middot;&nbsp; 2022&ndash;2024</li>
-    <li><strong>5G-CLARITY</strong> &nbsp;&middot;&nbsp; 2019&ndash;2022</li>
-  </ul>
+
+  {% for p in site.data.projects.participation %}
+  <div class="project-card">
+    <button class="project-header" onclick="toggleProject(this)">
+      <div class="project-header-left">
+        <span class="project-acronym">{{ p.acronym }}</span>
+        <span class="project-title-short">{{ p.title }}</span>
+      </div>
+      <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+    <div class="project-body">
+      <div class="project-detail"><span class="detail-label">Full title</span> {{ p.title }}</div>
+      {% if p.code %}
+      <div class="project-detail"><span class="detail-label">Code</span> {{ p.code }}</div>
+      {% endif %}
+      <div class="project-detail"><span class="detail-label">Funding body</span> {{ p.funder }}</div>
+      <div class="project-detail"><span class="detail-label">Principal Investigators</span> {{ p.pis }}</div>
+      <div class="project-detail"><span class="detail-label">Period</span> {{ p.start }} – {{ p.end }}</div>
+      {% if p.budget %}
+      <div class="project-detail"><span class="detail-label">Budget</span> {{ p.budget }}</div>
+      {% endif %}
+      {% if p.link %}
+      <div class="project-detail"><span class="detail-label">Link</span>
+        <a href="{{ p.link }}" target="_blank">Project page</a>
+      </div>
+      {% endif %}
+      {% if p.cert %}
+      <div class="project-detail"><span class="detail-label">Certificate</span>
+        <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
+          <i class="fas fa-file-pdf"></i> Certificate <span class="pdf-placeholder">(pending)</span>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
 </div>
 
 <hr>
