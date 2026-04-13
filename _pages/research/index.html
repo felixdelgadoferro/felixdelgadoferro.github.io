@@ -51,7 +51,6 @@ permalink: /research/
     <button class="project-header" onclick="toggleProject(this)">
       <div class="project-header-left">
         <span class="project-acronym">{{ p.acronym }}</span>
-        <span class="project-title-short">{{ p.title }}</span>
       </div>
       <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
     </button>
@@ -81,17 +80,16 @@ permalink: /research/
     <button class="project-header" onclick="toggleProject(this)">
       <div class="project-header-left">
         <span class="project-acronym">{{ p.acronym }}</span>
-        <span class="project-title-short">{{ p.title }}</span>
       </div>
       <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
     </button>
     <div class="project-body">
-      <div class="project-detail"><span class="detail-label">Full title</span> {{ p.title }}</div>
+      <div class="project-detail"><span class="detail-label">Title</span> {{ p.title }}</div>
       {% if p.code %}
       <div class="project-detail"><span class="detail-label">Code</span> {{ p.code }}</div>
       {% endif %}
-      <div class="project-detail"><span class="detail-label">Funding body</span> {{ p.funder }}</div>
-      <div class="project-detail"><span class="detail-label">Principal Investigators</span> {{ p.pis }}</div>
+      <div class="project-detail"><span class="detail-label">Funding</span> {{ p.funder }}</div>
+      <div class="project-detail"><span class="detail-label">IPs</span> {{ p.pis }}</div>
       <div class="project-detail"><span class="detail-label">Period</span> {{ p.start }} – {{ p.end }}</div>
       {% if p.budget %}
       <div class="project-detail"><span class="detail-label">Budget</span> {{ p.budget }}</div>
