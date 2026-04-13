@@ -237,8 +237,8 @@ body.dark-mode .nav-links a.active {
    HERO / HOME
 ============================================================ */
 .home-hero {
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border);
 }
 
