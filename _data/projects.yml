@@ -1,4 +1,13 @@
 leadership:
+  - acronym: "MAJARI"
+    title: "MAJARI: Machine Learning Approaches for Joint Analysis in pediatric cancer"
+    code: "PPJIB2023-073"
+    funder: "Precompetitive Research Projects for Young Researchers of the University of Granada"
+    pis: "F. Delgado-Ferro, A. Rodriguez-Solana "
+    start: "01/2024"
+    end: "12/2024"
+    cert: "cert_majari.pdf"
+    
   - acronym: "MPTCP-DRL"
     title: "Development of a multi-technology scheduler based on Multi-Path TCP using Deep Reinforcement Learning"
     code: "CITIC-2024-04"
@@ -8,14 +17,6 @@ leadership:
     end: "12/2024"
     cert: "cert_citic_2024.pdf"
 
-  - acronym: "MAJARI"
-    title: "MAJARI: Machine Learning Approaches for Joint Analysis in pediatric cancer"
-    code: "PPJIB2023-073"
-    funder: "Precompetitive Research Projects for Young Researchers of the University of Granada"
-    pis: "F. Delgado-Ferro, A. Rodriguez-Solana "
-    start: "01/2024"
-    end: "12/2024"
-    cert: "cert_majari.pdf"
 
 participation:
   - acronym: "6G-INSPIRE"

@@ -230,7 +230,7 @@ body.dark-mode .nav-links a.active {
 .main-content {
   max-width: var(--content-w);
   margin: 0 auto;
-  padding: calc(var(--navbar-h) + 3rem) 2rem 4rem;
+  padding: 0;
 }
 
 /* ============================================================
