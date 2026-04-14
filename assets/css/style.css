@@ -233,6 +233,12 @@ body.dark-mode .nav-links a.active {
   padding: calc(var(--navbar-h) + 3rem) 2rem 4rem;
 }
 
+.main-home {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 /* ============================================================
    HERO / HOME
 ============================================================ */
