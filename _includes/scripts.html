@@ -64,12 +64,18 @@ function toggleProject(btn) {
   if(!sel) return;
   sel.addEventListener('change', function(){
     var val = this.value;
-    document.querySelectorAll('.publication-card').forEach(function(c){
+    // Mostrar/ocultar items
+    document.querySelectorAll('.pub-item').forEach(function(c){
       c.style.display = (val === 'all' || c.dataset.year === val) ? '' : 'none';
     });
-    document.querySelectorAll('.pub-year-group').forEach(function(g){
-      var vis = g.querySelectorAll('.publication-card:not([style*="none"])').length;
-      g.style.display = vis ? '' : 'none';
+    // Mostrar/ocultar marcadores de año
+    document.querySelectorAll('.pub-year-marker').forEach(function(m){
+      m.style.display = (val === 'all' || m.dataset.year === val) ? '' : 'none';
+    });
+    // Mostrar/ocultar secciones vacías
+    document.querySelectorAll('.pub-section').forEach(function(s){
+      var visible = s.querySelectorAll('.pub-item:not([style*="none"])').length;
+      s.style.display = visible ? '' : 'none';
     });
   });
 })();
