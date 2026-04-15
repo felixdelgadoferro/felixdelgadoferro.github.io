@@ -1,0 +1,176 @@
+journals:
+  - authors: "O. Adamuz-Hinojosa, F. Delgado-Ferro, J. Navarro-Ortiz, P. Muñoz, and P. Ameigeiras"
+    title: "Unleashing 5G Seamless Integration With TSN for Industry 5.0: Frame Forwarding and QoS Treatment"
+    venue: "IEEE Open Journal of the Communications Society"
+    volume: "vol. 6"
+    pages: "pp. 4874-4884"
+    year: 2025
+    doi: "10.1109/OJCOMS.2025.3574397"
+    if: "6.3"
+    quartile: "Q1"
+
+  - authors: "N. Chinchilla-Romero, J. Prados-Garzon, F. Delgado-Ferro, and J. Navarro-Ortiz"
+    title: "An Optimization Model for Resource Allocation in Multi-Tenant LoRaWAN Scenarios"
+    venue: "IEEE Internet of Things Journal"
+    volume: "pp. 1-1"
+    year: 2025
+    doi: "10.1109/JIOT.2025.3569060"
+    if: "8.2"
+    quartile: "Q1"
+
+  - authors: "F. Delgado-Ferro, A. Ramírez-Arroyo, J. Navarro-Ortiz, and J. F. Valenzuela-Valdés"
+    title: "Experimental 5G Network Performance Analysis in a Semi-Anechoic and Semi-Reverberation Chamber"
+    venue: "IEEE Access"
+    volume: "vol. 13"
+    pages: "pp. 79678-79693"
+    year: 2025
+    doi: "10.1109/ACCESS.2025.3566446"
+    if: "3.4"
+    quartile: "Q2"
+
+  - authors: "J. Navarro-Ortiz, J. J. Ramos-Munoz, F. Delgado-Ferro, F. Canellas, D. Camps-Mur, A. Emami, and H. Falaki"
+    title: "Combining 5G New Radio, Wi-Fi, and LiFi for Industry 4.0: Performance Evaluation"
+    venue: "Sensors"
+    volume: "vol. 24, iss. 18"
+    year: 2024
+    doi: "10.3390/s24186022"
+    link: "https://www.mdpi.com/1424-8220/24/18/6022"
+    if: "3.4"
+    quartile: "Q2"
+
+  - authors: "J. Navarro-Ortiz, N. Chinchilla-Romero, F. Delgado-Ferro, and J. J. Ramos-Munoz"
+    title: "A LoRaWAN Network Architecture with MQTT2MULTICAST"
+    venue: "Electronics"
+    volume: "vol. 11, iss. 6"
+    year: 2022
+    doi: "10.3390/electronics11060872"
+    link: "https://www.mdpi.com/2079-9292/11/6/872"
+    if: "2.9"
+    quartile: "Q2"
+
+  - authors: "F. Delgado-Ferro, J. Navarro-Ortiz, N. Chinchilla-Romero, and J. J. Ramos-Munoz"
+    title: "A LoRaWAN Architecture for Communications in Areas without Coverage: Design and Pilot Trials"
+    venue: "Electronics"
+    volume: "vol. 11, iss. 5"
+    year: 2022
+    doi: "10.3390/electronics11050804"
+    link: "https://www.mdpi.com/2079-9292/11/5/804"
+    if: "2.9"
+    quartile: "Q2"
+
+conferences_intl:
+  - authors: "O. Adamuz-Hinojosa, F. Delgado-Ferro, N. Domenech, J. Navarro-Ortiz, P. Munoz, S. M. Darroudi, P. Ameigeiras, and J. M. Lopez-Soler"
+    title: "Empirical Analysis of 5G TDD Patterns Configurations for Industrial Automation Traffic"
+    venue: "2025 European Conference on Networks and Communications & 6G Summit (EuCNC/6G Summit)"
+    location: "Poznan, Poland"
+    year: 2025
+    doi: "10.1109/EuCNC/6GSummit63408.2025.11037107"
+    link: "https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037107"
+
+  - authors: "N. Chinchilla-Romero, J. Navarro-Ortiz, F. Delgado-Ferro, and J. M. Lopez-Soler"
+    title: "6G-LoRaGRAN: A Testbed for Researching LoRaWAN and 5G Integration"
+    venue: "IEEE Wireless Communications and Networking Conference (IEEE WCNC 2025)"
+    location: "Milan, Italy"
+    year: 2025
+    link: "https://ieeexplore.ieee.org/document/11045869"
+
+  - authors: "J. Caleya-Sanchez, P. Muñoz, J. Sánchez-Garrido, E. Florentín, F. Delgado-Ferro, P. Rodriguez-Martín, and P. Ameigeiras"
+    title: "Empirical Evaluation of a 5G Transparent Clock for Time Synchronization in a TSN-5G Network"
+    venue: "IEEE International Symposium Personal, Indoor and Mobile Radio Communications (PIMRC 2025)"
+    location: "Istanbul, Turkey"
+    year: 2025
+
+  - authors: "A. Rodriguez-Solana, L. Garcia-Marco, J.H. Migueles, A. Marmol-Perez, C. Cadenas-Sanchez, J.J. Gil-Cosano, F.J. Llorente-Cantarero, F. Delgado-Ferro, and E. Ubago-Guisado"
+    title: "Physical activity, sedentarism and sleep time and psychological health in young paediatric cancer survivors. A compositional data analysis from the iBoneFIT Project"
+    venue: "3rd Edition Exercise, Biomechanics and Nutrition (ESE/IPS 2024)"
+    location: "Setúbal, Portugal"
+    year: 2024
+
+  - authors: "P. Munoz, L. Chinchilla-Romero, N. Chinchilla-Romero, J. Prados-Garzon, O. Adamuz-Hinojosa, F. Delgado-Ferro, J. Caleya-Sanchez, P. Rodriguez-Martin, P. Ameigeiras, J. Navarro-Ortiz, J. J. Ramos-Munoz, and J. M. Lopez-Soler"
+    title: "WIMUNET: Current research on Internet of (Robotic) things and 5G"
+    venue: "Arqus Research Focus Forum – Artificial Intelligence and its applications"
+    location: "Granada, Spain"
+    year: 2022
+
+  - authors: "J. Navarro-Ortiz, N. Chinchilla-Romero, L. Chinchilla-Romero, J. Prados-Garzon, F. Delgado-Ferro, P. Ameigeiras, P. Munoz-Luengo, J. J. Ramos-Munoz, and J. M. Lopez-Soler"
+    title: "WiMuNet's research lines"
+    venue: "VI Workshop on QoE, QoS on Multimedia Communications (QQCM'21)"
+    year: 2021
+    link: "https://wpd.ugr.es/~jorgenavarro/publications/qqcm21_wimunet_research_lines.pdf"
+
+
+conferences_natl:
+  - authors: "F. Delgado-Ferro, R. Garcia-Verjaga, J. J. Ramos-Munoz, J. Navarro-Ortiz, and J. M. Lopez-Soler"
+    title: "INCA-LLM: Innovative Network Slicing in 5G/6G Core Auto-Configuration with LLM"
+    venue: "XVII Jornadas de Ingenieria Telematica (JITEL 2025)"
+    location: "Caceres, Spain"
+    year: 2025
+    link: "https://wpd.ugr.es/~jorgenavarro/publications/jitel25_felix_inca_llm.pdf"
+
+  - authors: "F. Delgado-Ferro and A. Rodríguez Solana"
+    title: "MAJARI Platform: Bringing Machine Learning tools closer to the Scientific Community"
+    venue: "V Congreso/VII Jornadas Investigadores en Formación Fomentando la Interdisciplinariedad (JIFFI 2024)"
+    location: "Granada, Spain"
+    year: 2024
+
+  - authors: "F. Delgado-Ferro, J. Navarro-Ortiz, N. Chinchilla-Romero, and J. M. Lopez-Soler"
+    title: "Reduccion de la latencia en redes 5G-NR"
+    venue: "XVI Jornadas de Ingenieria Telematica (JITEL 2023)"
+    location: "Barcelona, Spain"
+    year: 2023
+    link: "https://upcommons.upc.edu/handle/2117/401844"
+
+  - authors: "J. Navarro-Ortiz, N. Chinchilla-Romero, F. Delgado-Ferro, J. J. Ramos-Munoz, J. M. Lopez-Soler, and F. Tejero-Rodriguez"
+    title: "Transmission of images over LoRa"
+    venue: "XVI Jornadas de Ingenieria Telematica (JITEL 2023)"
+    location: "Barcelona, Spain"
+    year: 2023
+    link: "https://upcommons.upc.edu/handle/2117/401843"
+
+  - authors: "J. Navarro-Ortiz, N. Chinchilla-Romero, F. Delgado-Ferro, J. J. Ramos-Munoz, and J. M. Lopez-Soler"
+    title: "Converting a weather station into a LoRaWAN-enabled device"
+    venue: "XVI Jornadas de Ingenieria Telematica (JITEL 2023)"
+    location: "Barcelona, Spain"
+    year: 2023
+    link: "https://upcommons.upc.edu/handle/2117/401842"
+
+  - authors: "F. Delgado-Ferro, J. Navarro-Ortiz, L. Chinchilla-Romero, and P. Munoz-Luengo"
+    title: "Rendimiento de Redes 4G/5G usando una estación base real (Performance of 4G/5G networks using a real base station)"
+    venue: "XV Jornadas de Ingeniería Telemática (JITEL 2021)"
+    year: 2021
+
+  - authors: "F. Delgado-Ferro, J. Navarro-Ortiz, N. Chinchilla-Romero, and J. J. Ramos-Munoz"
+    title: "Arquitectura LoRaWAN para entornos sin cobertura (LoRaWAN network architecture for environments without coverage)"
+    venue: "XV Jornadas de Ingeniería Telemática (JITEL 2021)"
+    year: 2021
+
+  - authors: "J. Navarro-Ortiz, N. Chinchilla-Romero, F. Delgado-Ferro, and J. J. Ramos-Munoz"
+    title: "Arquitectura para redes IoT orientada a la sostenibilidad medioambiental (IoT network architecture oriented to environmental sustainability)"
+    venue: "XV Jornadas de Ingeniería Telemática (JITEL 2021)"
+    year: 2021
+
+posters:
+  - title: "Empirical Analysis of 5G TDD Patterns Configurations for Industrial Automation Traffic"
+    authors: ""
+    venue: ""
+    year: 2025
+
+  - title: "An Optimization Model for Resource Allocation in Multi-Tenant LoRaWAN Scenarios"
+    authors: ""
+    venue: ""
+    year: 2025
+
+  - title: "Desarrollo de una xAPP dentro del Near-RT RIC de una red 5G O-RAN"
+    authors: ""
+    venue: ""
+    year: 2025
+
+  - title: "6G-LoRaGRAN: Integration of the UGR's LoRaWAN network in the 6G-SANDBOX project"
+    authors: ""
+    venue: ""
+    year: 2024
+
+  - title: "Multi-technology scheduler for latency-awareness and load balancing"
+    authors: ""
+    venue: ""
+    year: 2024

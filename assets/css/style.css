@@ -988,3 +988,54 @@ body.page-home .navbar:hover {
   color: var(--text-muted);
   font-style: italic;
 }
+
+/* ============================================================
+   PUBLICATIONS TIMELINE
+============================================================ */
+.pub-section {
+  margin-bottom: 2rem;
+}
+
+.pub-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+/* Línea vertical naranja */
+.pub-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), rgba(200,134,10,0.1));
+}
+
+.pub-year-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0.75rem;
+  position: relative;
+}
+
+.pub-year-dot {
+  position: absolute;
+  left: -2.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+  flex-shrink: 0;
+}
+
+.pub-year-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

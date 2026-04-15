@@ -7,7 +7,7 @@ permalink: /publications/
 <div class="fade-in">
   <h1>Publications</h1>
   <p style="color:var(--text-muted);margin-bottom:1.5rem;">
-    Peer-reviewed journals and conference proceedings.
+    Peer-reviewed journals, international and national conference proceedings, and posters.
   </p>
   <div class="filter-bar">
     <label for="year-filter">Filter by year:</label>
@@ -17,62 +17,165 @@ permalink: /publications/
       <option value="2024">2024</option>
       <option value="2023">2023</option>
       <option value="2022">2022</option>
+      <option value="2021">2021</option>
     </select>
   </div>
 </div>
 
-<div class="pub-year-group fade-in">
-  <div class="section-label">2025 &mdash; Journal Articles</div>
-
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">Unleashing 5G Seamless Integration With TSN for Industry 5.0: Frame Forwarding and QoS Treatment</div>
-    <div class="pub-authors">O. Adamuz-Hinojosa, F. Delgado-Ferro, J. Navarro-Ortiz, P. Mu&ntilde;oz, and P. Ameigeiras</div>
-    <div class="pub-venue">IEEE Open Journal of the Communications Society &middot; 2025 <span class="pub-quartile">Q1</span> <span class="pub-if">IF&nbsp;6.3</span></div>
-    <div class="pub-links">
-      <a class="pub-link-btn" href="https://doi.org/10.1109/OJCOMS.2025.3574397" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-    </div>
-  </div>
-
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">An Optimization Model for Resource Allocation in Multi-Tenant LoRaWAN Scenarios</div>
-    <div class="pub-authors">N. Chinchilla-Romero, J. Prados-Garzon, F. Delgado-Ferro, and J. Navarro-Ortiz</div>
-    <div class="pub-venue">IEEE Internet of Things Journal &middot; 2025 <span class="pub-quartile">Q1</span> <span class="pub-if">IF&nbsp;8.2</span></div>
-    <div class="pub-links">
-      <a class="pub-link-btn" href="https://doi.org/10.1109/JIOT.2025.3569060" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-    </div>
-  </div>
-
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">Experimental 5G Network Performance Analysis in a Semi-Anechoic and Semi-Reverberation Chamber</div>
-    <div class="pub-authors">F. Delgado-Ferro, A. Ram&iacute;rez-Arroyo, J. Navarro-Ortiz, and J. F. Valenzuela-Vald&eacute;s</div>
-    <div class="pub-venue">IEEE Access &middot; 2025 <span class="pub-quartile">Q2</span> <span class="pub-if">IF&nbsp;3.4</span></div>
-    <div class="pub-links">
-      <a class="pub-link-btn" href="https://doi.org/10.1109/ACCESS.2025.3566446" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-    </div>
+<!-- INTERNATIONAL JOURNAL ARTICLES -->
+<div class="pub-section fade-in" id="section-journals">
+  <div class="section-label">International Journal Articles</div>
+  <div class="pub-timeline">
+    {% assign journals_sorted = site.data.publications.journals | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in journals_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker" data-year="{{ y }}">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card pub-item" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        <div class="pub-authors">{{ p.authors }}</div>
+        <div class="pub-venue">
+          <span><em>{{ p.venue }}</em>{% if p.volume %}, {{ p.volume }}{% endif %}{% if p.pages %}, {{ p.pages }}{% endif %}, {{ p.year }}.</span>
+          {% if p.quartile %}<span class="pub-quartile">{{ p.quartile }}</span>{% endif %}
+          {% if p.if %}<span class="pub-if">IF&nbsp;{{ p.if }}</span>{% endif %}
+        </div>
+        <div class="pub-links">
+          {% if p.doi %}
+          <a class="pub-link-btn" href="https://doi.org/{{ p.doi }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i> DOI
+          </a>
+          {% endif %}
+          {% if p.link %}
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
-<div class="pub-year-group fade-in">
-  <div class="section-label">2025 &mdash; Conference Papers</div>
+<hr>
 
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">INCA-LLM: Innovative Network Slicing in 5G/6G Core Auto-Configuration with LLM</div>
-    <div class="pub-authors">F. Delgado-Ferro et al.</div>
-    <div class="pub-venue">JITEL 2025 <span class="conf-badge">Conference</span></div>
+<!-- INTERNATIONAL CONFERENCES -->
+<div class="pub-section fade-in" id="section-intl">
+  <div class="section-label">International Conference Papers</div>
+  <div class="pub-timeline">
+    {% assign intl_sorted = site.data.publications.conferences_intl | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in intl_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker" data-year="{{ y }}">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card pub-item" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        <div class="pub-authors">{{ p.authors }}</div>
+        <div class="pub-venue">
+          <span>in <em>{{ p.venue }}</em>{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>
+          <span class="conf-badge">Conference</span>
+        </div>
+        <div class="pub-links">
+          {% if p.doi %}
+          <a class="pub-link-btn" href="https://doi.org/{{ p.doi }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i> DOI
+          </a>
+          {% endif %}
+          {% if p.link %}
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
+</div>
 
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">Empirical Analysis of 5G TDD Patterns Configurations for Industrial Automation Traffic</div>
-    <div class="pub-authors">O. Adamuz-Hinojosa et al.</div>
-    <div class="pub-venue">EuCNC/6G Summit 2025 <span class="conf-badge">Conference</span></div>
-    <div class="pub-links">
-      <a class="pub-link-btn" href="https://doi.org/10.1109/EuCNC/6GSummit63408.2025.11037107" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
-    </div>
+<hr>
+
+<!-- NATIONAL CONFERENCES -->
+<div class="pub-section fade-in" id="section-natl">
+  <div class="section-label">National Conference Papers</div>
+  <div class="pub-timeline">
+    {% assign natl_sorted = site.data.publications.conferences_natl | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in natl_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker" data-year="{{ y }}">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card pub-item" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        <div class="pub-authors">{{ p.authors }}</div>
+        <div class="pub-venue">
+          <span>in <em>{{ p.venue }}</em>{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>
+          <span class="conf-badge">National</span>
+        </div>
+        <div class="pub-links">
+          {% if p.doi %}
+          <a class="pub-link-btn" href="https://doi.org/{{ p.doi }}" target="_blank">
+            <i class="fas fa-external-link-alt"></i> DOI
+          </a>
+          {% endif %}
+          {% if p.link %}
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
+</div>
 
-  <div class="publication-card" data-year="2025">
-    <div class="pub-title">6G-LoRaGRAN: A Testbed for Researching LoRaWAN and 5G Integration</div>
-    <div class="pub-authors">N. Chinchilla-Romero et al.</div>
-    <div class="pub-venue">IEEE WCNC 2025 <span class="conf-badge">Conference</span></div>
+<hr>
+
+<!-- POSTERS -->
+<div class="pub-section fade-in" id="section-posters">
+  <div class="section-label">Dissemination Posters</div>
+  <div class="pub-timeline">
+    {% assign posters_sorted = site.data.publications.posters | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in posters_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker" data-year="{{ y }}">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card pub-item" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        {% if p.authors %}<div class="pub-authors">{{ p.authors }}</div>{% endif %}
+        <div class="pub-venue">
+          {% if p.venue %}<span>{{ p.venue }}{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>{% else %}<span>{{ p.year }}</span>{% endif %}
+          <span class="conf-badge">Poster</span>
+        </div>
+        <div class="pub-links">
+          {% if p.link %}
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
