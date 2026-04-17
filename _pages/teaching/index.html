@@ -240,7 +240,7 @@ permalink: /teaching/
 <div class="home-section fade-in">
   <div class="section-label">Educational Conferences</div>
   <div class="pub-timeline">
-    {% assign conf_sorted = site.data.teaching.dissemination_conferences | sort: "year" | reverse %}
+    {% assign conf_sorted = site.data.teaching.educational_conferences | sort: "year" | reverse %}
     {% assign current_year = "" %}
     {% for p in conf_sorted %}
       {% assign y = p.year | toString %}
@@ -275,7 +275,7 @@ permalink: /teaching/
 <div class="home-section fade-in">
   <div class="section-label">Educational Dissemination</div>
   <div class="pub-timeline">
-    {% assign conf_sorted = site.data.teaching.dissemination_conferences | sort: "year" | reverse %}
+    {% assign conf_sorted = site.data.teaching.dissemination_sessions | sort: "year" | reverse %}
     {% assign current_year = "" %}
     {% for p in conf_sorted %}
       {% assign y = p.year | toString %}
@@ -321,4 +321,4 @@ permalink: /teaching/
     </div>
     {% endfor %}
   </div>
-</div>
+</div> 
