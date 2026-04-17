@@ -7,44 +7,318 @@ permalink: /teaching/
 <div class="fade-in">
   <h1>Teaching</h1>
   <p>
-    Teaching activities within the <strong>Telematics Engineering</strong> area at the
-    University of Granada, contributing to both undergraduate and postgraduate programs.
+    Within the Telematics Engineering Area of the Department of Signal Theory,
+    Telematics and Communications of the School of Computer and Telecommunications
+    Engineering of the University of Granada, I have been contributing to both
+    undergraduate and postgraduate programs during my doctoral studies and my training
+    as a university lecturer through an <strong>FPU grant</strong>
+    (Formación del Profesorado Universitario).
   </p>
 </div>
 
 <hr>
 
+<!-- COURSES -->
 <div class="home-section fade-in">
   <div class="section-label">Courses</div>
-  <ul class="project-list">
-    <li>Advanced Networks and Services</li>
-    <li>Wireless Networks and Mobility</li>
-    <li>Networking Fundamentals</li>
-  </ul>
+
+  {% for c in site.data.teaching.courses %}
+  <div class="project-card">
+    <button class="project-header" onclick="toggleProject(this)">
+      <div class="project-header-left">
+        <span class="project-acronym">{{ c.degree_english }}</span>
+        <span class="project-title-short">{{ c.english }}</span>
+      </div>
+      <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+    <div class="project-body">
+      <div class="project-detail">
+        <span class="detail-label">Subject</span>
+        {{ c.name }} — {{ c.english }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Degree</span>
+        {{ c.degree }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Year in degree</span>
+        {{ c.year_in_degree }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Academic years</span>
+        {{ c.academic_years | join: ", " }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 
 <hr>
 
+<!-- MSC THESES -->
 <div class="home-section fade-in">
-  <div class="section-label">Thesis Supervision</div>
-  <ul class="timeline">
-    <li>
-      <div class="tl-degree">M.Sc. Thesis: Development of xAPP in 5G Open RAN</div>
-      <div class="tl-meta">University of Granada &middot; 2025</div>
-    </li>
-    <li>
-      <div class="tl-degree">B.Sc. Thesis: Performance evaluation of 5G networks</div>
-      <div class="tl-meta">University of Granada &middot; Ongoing</div>
-    </li>
-  </ul>
+  <div class="section-label">Director of M.Sc. Theses</div>
+  <div class="pub-timeline">
+    {% assign msc_sorted = site.data.teaching.msc_theses | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for t in msc_sorted %}
+      {% assign y = t.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{% if t.status == "ongoing" %}Ongoing{% else %}{{ y }}{% endif %}</span>
+        </div>
+      {% endif %}
+      <div class="project-card pub-item" data-year="{{ y }}" style="margin-bottom:0.6rem;">
+        <button class="project-header" onclick="toggleProject(this)">
+          <div class="project-header-left">
+            <span class="project-acronym">{{ t.student }}</span>
+            <span class="project-title-short">{{ t.title }}</span>
+          </div>
+          <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="project-body">
+          <div class="project-detail">
+            <span class="detail-label">Student</span> {{ t.student }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Title</span> "{{ t.title }}"
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Degree</span> {{ t.degree }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Institution</span> {{ t.school }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Supervisors</span> {{ t.supervisors }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Status</span>
+            {% if t.status == "ongoing" %}
+              <span style="color:var(--accent);font-weight:600;">On development</span>
+            {% else %}
+              {{ t.year }}
+            {% endif %}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Document</span>
+            {% if t.doc != "" %}
+              <a class="pdf-btn" href="{{ t.doc }}" target="_blank">
+                <i class="fas fa-file-pdf"></i> Download
+              </a>
+            {% else %}
+              <span class="pdf-placeholder">(pending)</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 <hr>
 
+<!-- BSC THESES -->
+<div class="home-section fade-in">
+  <div class="section-label">Director of Bachelor Theses</div>
+  <div class="pub-timeline">
+    {% assign bsc_sorted = site.data.teaching.bsc_theses | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for t in bsc_sorted %}
+      {% assign y = t.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{% if t.status == "ongoing" %}Ongoing{% else %}{{ y }}{% endif %}</span>
+        </div>
+      {% endif %}
+      <div class="project-card pub-item" data-year="{{ y }}" style="margin-bottom:0.6rem;">
+        <button class="project-header" onclick="toggleProject(this)">
+          <div class="project-header-left">
+            <span class="project-acronym">{{ t.student }}</span>
+            <span class="project-title-short">{{ t.title }}</span>
+          </div>
+          <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+        </button>
+        <div class="project-body">
+          <div class="project-detail">
+            <span class="detail-label">Student</span> {{ t.student }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Title</span> "{{ t.title }}"
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Degree</span> {{ t.degree }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Institution</span> {{ t.school }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Supervisors</span> {{ t.supervisors }}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Status</span>
+            {% if t.status == "ongoing" %}
+              <span style="color:var(--accent);font-weight:600;">On development</span>
+            {% else %}
+              {{ t.year }}
+            {% endif %}
+          </div>
+          <div class="project-detail">
+            <span class="detail-label">Document</span>
+            {% if t.doc != "" %}
+              <a class="pdf-btn" href="{{ t.doc }}" target="_blank">
+                <i class="fas fa-file-pdf"></i> Download
+              </a>
+            {% else %}
+              <span class="pdf-placeholder">(pending)</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr>
+
+<!-- TEACHING INNOVATION PROJECTS -->
 <div class="home-section fade-in">
   <div class="section-label">Teaching Innovation Projects</div>
-  <ul class="project-list">
-    <li><strong>PLAYROOM</strong> &nbsp;&middot;&nbsp; 2024</li>
-    <li><strong>VALERIE</strong> &nbsp;&middot;&nbsp; 2022</li>
-  </ul>
+
+  {% for p in site.data.teaching.innovation_projects %}
+  <div class="project-card">
+    <button class="project-header" onclick="toggleProject(this)">
+      <div class="project-header-left">
+        <span class="project-acronym">{{ p.acronym }}</span>
+        <span class="project-title-short">{{ p.title }}</span>
+      </div>
+      <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+    <div class="project-body">
+      <div class="project-detail">
+        <span class="detail-label">Full title</span> {{ p.title }}
+      </div>
+      {% if p.code %}
+      <div class="project-detail">
+        <span class="detail-label">Code</span> {{ p.code }}
+      </div>
+      {% endif %}
+      <div class="project-detail">
+        <span class="detail-label">Funding body</span> {{ p.funder }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Principal Investigators</span> {{ p.pis }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Period</span> {{ p.start }}{% if p.end != p.start %} – {{ p.end }}{% endif %}
+      </div>
+      {% if p.cert != "" %}
+      <div class="project-detail">
+        <span class="detail-label">Certificate</span>
+        <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
+          <i class="fas fa-file-pdf"></i> Certificate
+        </a>
+      </div>
+      {% else %}
+      <div class="project-detail">
+        <span class="detail-label">Certificate</span>
+        <span class="pdf-placeholder">(pending)</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<hr>
+
+<!-- EDUCATIONAL CONFERENCES -->
+<div class="home-section fade-in">
+  <div class="section-label">Educational Conferences</div>
+  <div class="pub-timeline">
+    {% assign conf_sorted = site.data.teaching.dissemination_conferences | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in conf_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        {% if p.authors %}<div class="pub-authors">{{ p.authors }}</div>{% endif %}
+        <div class="pub-venue">
+          <span>{{ p.venue }}{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>
+        </div>
+        {% if p.link != "" %}
+        <div class="pub-links">
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr>
+
+<!-- DISSEMINATION SESSIONS -->
+<div class="home-section fade-in">
+  <div class="section-label">Educational Dissemination</div>
+  <div class="pub-timeline">
+    {% assign conf_sorted = site.data.teaching.dissemination_conferences | sort: "year" | reverse %}
+    {% assign current_year = "" %}
+    {% for p in conf_sorted %}
+      {% assign y = p.year | toString %}
+      {% if y != current_year %}
+        {% assign current_year = y %}
+        <div class="pub-year-marker">
+          <span class="pub-year-dot"></span>
+          <span class="pub-year-label">{{ y }}</span>
+        </div>
+      {% endif %}
+      <div class="publication-card" data-year="{{ y }}">
+        <div class="pub-title">{{ p.title }}</div>
+        {% if p.authors %}<div class="pub-authors">{{ p.authors }}</div>{% endif %}
+        <div class="pub-venue">
+          <span>{{ p.venue }}{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>
+        </div>
+        {% if p.link != "" %}
+        <div class="pub-links">
+          <a class="pub-link-btn" href="{{ p.link }}" target="_blank">
+            <i class="fas fa-link"></i> Link
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr>
+
+<!-- TRAINING COURSES RECEIVED -->
+<div class="home-section fade-in">
+  <div class="section-label">Training Courses Received</div>
+  <div class="training-grid">
+    {% for c in site.data.teaching.training_courses %}
+    <div class="training-card">
+      <div class="training-title">{{ c.title }}</div>
+      <div class="training-meta">
+        <span><i class="fas fa-building"></i> {{ c.organizer }}</span>
+        <span><i class="fas fa-calendar"></i> {{ c.start }}{% if c.end != c.start %} – {{ c.end }}{% endif %}</span>
+        <span><i class="fas fa-clock"></i> {{ c.hours }}h</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>

@@ -1,0 +1,95 @@
+courses:
+  - name: "Infraestructuras y Redes de Comunicación (IRC)"
+    english: "Communication Networks and Infrastructures"
+    degree: "Grado de Ingeniería de Tecnologías de Telecomunicación"
+    degree_english: "B.Sc. in Telecommunication Technologies Engineering"
+    year_in_degree: "2nd year"
+    academic_years:
+      - "2021/22"
+      - "2022/23"
+      - "2023/24"
+
+  - name: "Transmisión de Datos y Redes de Computadores"
+    english: "Data Transmission and Computer Networks"
+    degree: "Grado de Ingeniería Informática"
+    degree_english: "B.Sc. in Computer Engineering"
+    year_in_degree: "3rd year"
+    academic_years:
+      - "2021/22"
+      - "2022/23"
+      - "2023/24"
+
+msc_theses:
+  - student: "A. Oliver-Boada"
+    title: "Development of an xAPP within the Near-RT RIC of a 5G Open RAN network"
+    degree: "M.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2025
+    supervisors: "F. Delgado-Ferro, J. Navarro-Ortiz"
+    status: "completed"
+    doc: ""
+
+bsc_theses:
+  - student: "A. D. Ruiz-Ustimova"
+    title: "Performance evaluation of FR2 using a real 5G network prototype"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2025
+    supervisors: "F. Delgado-Ferro, J. Navarro-Ortiz"
+    status: "ongoing"
+    doc: ""
+
+innovation_projects:
+  - acronym: "PLAYROOM"
+    title: "PLAYROOM Teaching Innovation Project"
+    funder: "University of Granada"
+    pis: "J. J. Ramos-Munoz"
+    start: "2024"
+    end: "2025"
+    cert: ""
+
+  - acronym: "VALERIE"
+    title: "VALERIE (VirtuAL rEality foR teachIng Engineering)"
+    code: "PID-2022-147"
+    funder: "University of Granada"
+    pis: "J. J. Ramos-Munoz"
+    start: "2022"
+    end: "2023"
+    cert: ""
+
+  - acronym: "INNOVA-RAG"
+    title: "INNOVA-RAG Teaching Innovation Project"
+    funder: "University of Granada"
+    pis: "TBD"
+    start: "TBD"
+    end: "TBD"
+    cert: ""
+
+educational_conferences:
+  - authors: "Author A, Author B"
+    title: "Title of the dissemination talk or presentation"
+    venue: "Conference or event name"
+    location: "City, Country"
+    year: 2024
+    link: ""
+
+dissemination_sessions:
+  - authors: "Author A, Author B"
+    title: "Another example of educational dissemination activity"
+    venue: "Workshop or seminar name"
+    location: "City, Country"
+    year: 2023
+    link: ""
+
+training_courses:
+  - title: "Example Training Course Title"
+    organizer: "Organizing Institution"
+    start: "January 2024"
+    end: "February 2024"
+    hours: 20
+
+  - title: "Another Training Course"
+    organizer: "Organizing Institution"
+    start: "March 2023"
+    end: "March 2023"
+    hours: 10
