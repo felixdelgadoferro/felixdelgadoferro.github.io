@@ -102,7 +102,8 @@ permalink: /teaching/
             <span class="detail-label">Status</span>
             <span style="color:var(--accent);font-weight:600;">On development</span>
           </div>
-
+          {% endif %}
+          
           {% if t.status == "mark" %}
           <div class="project-detail">
             <span class="detail-label">Status</span>
@@ -172,14 +173,14 @@ permalink: /teaching/
             <span class="detail-label">Status</span>
             <span style="color:var(--accent);font-weight:600;">On development</span>
           </div>
-
+          {% endif %}
           {% if t.status == "mark" %}
           <div class="project-detail">
             <span class="detail-label">Status</span>
             <span style="color:var(--accent);font-weight:600;">This bachelor thesis obtained the highest possible mark.</span>
           </div>    
           {% endif %}
-          
+
           <div class="project-detail">
             <span class="detail-label">Document</span>
             {% if t.doc != "" %}
