@@ -26,8 +26,8 @@ permalink: /teaching/
   <div class="project-card">
     <button class="project-header" onclick="toggleProject(this)">
       <div class="project-header-left">
-        <span class="project-acronym">{{ c.degree_english }}</span>
-        <span class="project-title-short">{{ c.english }}</span>
+        <span class="project-acronym">{{ c.english }}</span>
+        <span class="project-title-short">{{ c.degree_english }}</span>
       </div>
       <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
     </button>
@@ -38,7 +38,7 @@ permalink: /teaching/
       </div>
       <div class="project-detail">
         <span class="detail-label">Degree</span>
-        {{ c.degree }}
+        {{ c.degree_english }}
       </div>
       <div class="project-detail">
         <span class="detail-label">Year in degree</span>
@@ -95,13 +95,21 @@ permalink: /teaching/
             <span class="detail-label">Supervisors</span> {{ t.supervisors }}
           </div>
           <div class="project-detail">
-            <span class="detail-label">Status</span>
-            {% if t.status == "ongoing" %}
-              <span style="color:var(--accent);font-weight:600;">On development</span>
-            {% else %}
-              {{ t.year }}
-            {% endif %}
+            <span class="detail-label">Year</span> {{ t.year }}
           </div>
+          {% if t.status == "ongoing" %}
+          <div class="project-detail">
+            <span class="detail-label">Status</span>
+            <span style="color:var(--accent);font-weight:600;">On development</span>
+          </div>
+
+          {% if t.status == "mark" %}
+          <div class="project-detail">
+            <span class="detail-label">Status</span>
+            <span style="color:var(--accent);font-weight:600;">This bachelor thesis obtained the highest possible mark.</span>
+          </div>    
+          {% endif %}
+          
           <div class="project-detail">
             <span class="detail-label">Document</span>
             {% if t.doc != "" %}
@@ -159,14 +167,19 @@ permalink: /teaching/
           <div class="project-detail">
             <span class="detail-label">Supervisors</span> {{ t.supervisors }}
           </div>
+          {% if t.status == "ongoing" %}
           <div class="project-detail">
             <span class="detail-label">Status</span>
-            {% if t.status == "ongoing" %}
-              <span style="color:var(--accent);font-weight:600;">On development</span>
-            {% else %}
-              {{ t.year }}
-            {% endif %}
+            <span style="color:var(--accent);font-weight:600;">On development</span>
           </div>
+
+          {% if t.status == "mark" %}
+          <div class="project-detail">
+            <span class="detail-label">Status</span>
+            <span style="color:var(--accent);font-weight:600;">This bachelor thesis obtained the highest possible mark.</span>
+          </div>    
+          {% endif %}
+          
           <div class="project-detail">
             <span class="detail-label">Document</span>
             {% if t.doc != "" %}

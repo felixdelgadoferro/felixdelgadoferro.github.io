@@ -25,7 +25,16 @@ msc_theses:
     degree: "M.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2025
-    supervisors: "F. Delgado-Ferro, J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "mark"
+    doc: ""
+
+  - student: "A. Gomez-Hurtado"
+    title: "Synchronization between UE and gNB in 5G networks"
+    degree: "M.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2025
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
     status: "completed"
     doc: ""
 
@@ -34,12 +43,101 @@ bsc_theses:
     title: "Performance evaluation of FR2 using a real 5G network prototype"
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
-    year: 2025
-    supervisors: "F. Delgado-Ferro, J. Navarro-Ortiz"
+    year: 2026
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
     status: "ongoing"
     doc: ""
 
+  - student: "A. Cabrera-Estepa"
+    title: "Performance evaluation of a real 5G network prototype"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2026
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "ongoing"
+    doc: ""
+    
+  - student: "A. Lirola Morales"
+    title: "Vehicle-to-Everything (V2X) Service Orchestration over 5G"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2026
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. M. Lopez-Soler"
+    status: "ongoing"
+    doc: ""    
+
+  - student: "P. Genaro Soria"
+    title: "Design and Evaluation of a LoRaWAN-Based UAV Network for Emergency Environments"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2026
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. M. Lopez-Soler"
+    status: "ongoing"
+    doc: ""   
+
+  #- student: "M. Montecatine Ibarrondo"
+  #  title: ""
+  #  degree: "B.Sc. Telecommunications Engineering"
+  #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+  #  year: 2026
+  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  status: "ongoing"
+  #  doc: "" 
+
+  #- student: "A. Rosa"
+  #  title: ""
+  #  degree: "B.Sc. Telecommunications Engineering"
+  #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+  #  year: 2026
+  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  status: "ongoing"
+  #  doc: "" 
+
+  - student: "J. A. Marques-Ponce"
+    title: "Anomaly detection in IoT vehicles using Machine Learning"
+    degree: "B.Sc. Computer Science Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2025
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "completed"
+    doc: "" 
+
+  - student: "J. G. Garcia-Valdecasas-Mendoza"
+    title: "Integration of LoRaWAN and 5G networks"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2024
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "completed"
+    doc: ""  
+
+  - student: "J. Jimenez-Gonzalez"
+    title: "Configuration and performance assessment of 4G/5G networks"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2023
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "completed"
+    doc: ""  
+
+  - student: "A. Oliver-Boada"
+    title: "Configuration and usage of MPTCP in mobile devices"
+    degree: "B.Sc. Telecommunications Engineering"
+    school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+    year: 2023
+    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    status: "mark"
+    doc: ""  
+
 innovation_projects:
+  - acronym: "INNOVA-RAG"
+    title: "INNOVA-RAG Teaching Innovation Project"
+    funder: "University of Granada"
+    pis: "P. Muñoz-Luengo"
+    start: "2025"
+    end: "2026"
+    cert: ""
+
   - acronym: "PLAYROOM"
     title: "PLAYROOM Teaching Innovation Project"
     funder: "University of Granada"
@@ -57,20 +155,19 @@ innovation_projects:
     end: "2023"
     cert: ""
 
-  - acronym: "INNOVA-RAG"
-    title: "INNOVA-RAG Teaching Innovation Project"
-    funder: "University of Granada"
-    pis: "TBD"
-    start: "TBD"
-    end: "TBD"
-    cert: ""
-
 educational_conferences:
-  - authors: "Author A, Author B"
-    title: "Title of the dissemination talk or presentation"
-    venue: "Conference or event name"
-    location: "City, Country"
-    year: 2024
+  - authors: "P. Muñoz Luengo, O. Adamuz Hinojosa, A. Biedma Pérez, J. Caleya-Sánchez, F. Delgado-Ferro, J. E. Díaz Verdejo, | J. E. Galeote Cazorla, A. M. Mora García, J. Navarro Ortiz, J. Prados Garzón, J. J. Ramos Muñoz, P. Rodríguez Martín, | A. Ruiz Moya, J. F. Valenzuela Valdés"
+    title: "INNOVA-RAG: Application of the Retrieval Augmented Generation (RAG) technique in the field of educational innovation"
+    venue: "XXII International Congress on Educational Research. AIDIPE 2026"
+    location: "Granada, Spain"
+    year: 2026
+    link: ""
+
+  - authors: "J. J. Ramos-Muñoz, F. Delgado-Ferro, J. Prados-Garzon, J. Caleya-Sánchez, P. Rodríguez Martín, | O. Adamuz-Hinojosa, N. Chinchilla-Romero and J. Navarro-Ortiz"
+    title: "Lighthearted Games for Learning Computer Network Deployment Project Management"
+    venue: "IV Congreso Español de Videojuegos"
+    location: "Granada, Spain"
+    year: 2025
     link: ""
 
 dissemination_sessions:
