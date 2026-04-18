@@ -103,7 +103,7 @@ permalink: /teaching/
             <span style="color:var(--accent);font-weight:600;">On development</span>
           </div>
           {% endif %}
-          
+
           {% if t.status == "mark" %}
           <div class="project-detail">
             <span class="detail-label">Status</span>
@@ -214,7 +214,7 @@ permalink: /teaching/
     </button>
     <div class="project-body">
       <div class="project-detail">
-        <span class="detail-label">Full title</span> {{ p.title }}
+        <span class="detail-label">Title</span> {{ p.title }}
       </div>
       {% if p.code %}
       <div class="project-detail">
@@ -222,10 +222,10 @@ permalink: /teaching/
       </div>
       {% endif %}
       <div class="project-detail">
-        <span class="detail-label">Funding body</span> {{ p.funder }}
+        <span class="detail-label">Funding </span> {{ p.funder }}
       </div>
       <div class="project-detail">
-        <span class="detail-label">Principal Investigators</span> {{ p.pis }}
+        <span class="detail-label">IPs</span> {{ p.pis }}
       </div>
       <div class="project-detail">
         <span class="detail-label">Period</span> {{ p.start }}{% if p.end != p.start %} – {{ p.end }}{% endif %}
