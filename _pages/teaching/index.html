@@ -233,7 +233,7 @@ permalink: /teaching/
       {% if p.cert != "" %}
       <div class="project-detail">
         <span class="detail-label">Certificate</span>
-        <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
+        <a class="pdf-btn" href="{{ '/assets/docs/proj_innovation/' | append: p.cert | relative_url }}" target="_blank">
           <i class="fas fa-file-pdf"></i> Certificate
         </a>
       </div>
@@ -331,6 +331,9 @@ permalink: /teaching/
         <span><i class="fas fa-building"></i> {{ c.organizer }}</span>
         <span><i class="fas fa-calendar"></i> {{ c.start }}{% if c.end != c.start %} – {{ c.end }}{% endif %}</span>
         <span><i class="fas fa-clock"></i> {{ c.hours }}h</span>
+        <a class="pdf-btn" href="{{ '/assets/docs/certs/' | append: p.cert | relative_url }}" target="_blank">
+          <i class="fas fa-file-pdf"></i> Certificate
+        </a>
       </div>
     </div>
     {% endfor %}
