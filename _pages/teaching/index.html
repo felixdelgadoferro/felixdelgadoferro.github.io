@@ -304,7 +304,7 @@ permalink: /teaching/
         <div class="pub-title">{{ p.title }}</div>
         {% if p.authors %}<div class="pub-authors">{{ p.authors }}</div>{% endif %}
         <div class="pub-venue">
-          <span>{{ p.venue }}{% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }}.</span>
+          <span>{{ p.venue }}{% if p.organizer %}, {{ p.organizer }}{% endif %} {% if p.location %}, {{ p.location }}{% endif %}, {{ p.year }} {% if p.location %} ({{ p.hours }}h ) {% endif %}.</span>
         </div>
         {% if p.link != "" %}
         <div class="pub-links">
@@ -322,7 +322,7 @@ permalink: /teaching/
 
 <!-- TRAINING COURSES RECEIVED -->
 <div class="home-section fade-in">
-  <div class="section-label">Training Courses Received</div>
+  <div class="section-label">Educational Training Courses Received</div>
   <div class="training-grid">
     {% for c in site.data.teaching.training_courses %}
     <div class="training-card">

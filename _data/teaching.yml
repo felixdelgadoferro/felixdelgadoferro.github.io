@@ -129,6 +129,15 @@ bsc_theses:
     status: "mark"
     doc: ""  
 
+  #- student: "Fabian "
+  #  title: ""
+  #  degree: "B.Sc. Telecommunications Engineering"
+  #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
+  #  year: 2026
+  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  status: "ongoing"
+  #  doc: "" 
+
 innovation_projects:
   - acronym: "INNOVA-RAG"
     title: "INNOVA-RAG Teaching Innovation Project"
@@ -171,22 +180,50 @@ educational_conferences:
     link: ""
 
 dissemination_sessions:
-  - authors: "Author A, Author B"
-    title: "Another example of educational dissemination activity"
-    venue: "Workshop or seminar name"
-    location: "City, Country"
+  - authors: "Felix Delgado-Ferro"
+    title: "Dissemination workshop: Learn how the Internet works. Exploring the Internet through a role-playing game"
+    venue: " Engineering Fair 2024"
+    organizer: "Office of Scientific Culture at the University of Granada."
+    location: "Granada, Spain"
+    year: 2024
+    hours: 4
+    link: ""
+  
+  - authors: "Felix Delgado-Ferro and Juan J. Ramos-Muñoz"
+    title: "Session Mobile Game Development"
+    venue: "1st UNIDIVERSIDAD Summer Camp – The University Beyond the Classroom"
+    organizer: "University of Granada, University of Extremadura and University of Salamanca. Co-funding by: Operational Program for Youth Employment 2014–2020 of the ONCE Foundation and the European Social Fund"
+    location: "Pradollano, Granada, Spain"
     year: 2023
+    hours: 4
     link: ""
 
 training_courses:
-  - title: "Example Training Course Title"
-    organizer: "Organizing Institution"
-    start: "January 2024"
-    end: "February 2024"
-    hours: 20
+  - title: "Digital Education Training program for Lecturers."
+    organizer: "Center for the Production of Resources for the Digital University (CEPRUD) at the University of Granada"
+    start: "9 Apr. 2026"
+    end: "On going"
+    hours: --
+    cert: ""
 
-  - title: "Another Training Course"
-    organizer: "Organizing Institution"
-    start: "March 2023"
-    end: "March 2023"
-    hours: 10
+  - title: "Application of new Technologies to improve Academic Education. Gamification, Edutainment, and Chatbots in the classroom (3rd Edition)"
+    organizer: "Office of Quality, Teaching Innovation, and Strategic Planning at the University of Granada"
+    start: "30 Jan. 2023"
+    end: "10 Feb. 2023"
+    hours: 35
+    cert: ""
+
+  - title: "Workshop on writing scientific papers using LaTeX and version control with Git"
+    organizer: "Doctoral School of Science, Technology, and Engineering at the University of Granada"
+    start: "7 Mar. 2022"
+    end: "21 Mar. 2022"
+    hours: 20
+    cert: ""
+
+  - title: "VI Workshop on Introduction to University Teaching for Pre-doctoral Faculty Members FPU and FPI"
+    organizer: "Office of Quality, Teaching Innovation, and Strategic Planning at the University of Granada"
+    start: "20 Jan. 2022"
+    end: "21 Jan. 2022"
+    hours: 20
+    cert: ""
+
