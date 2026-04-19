@@ -1087,3 +1087,310 @@ body.page-home .navbar:hover {
 @media (max-width: 480px) {
   .training-meta { flex-direction: column; gap: 0.3rem; }
 }
+
+/* ============================================================
+   CURRICULUM VITAE
+============================================================ */
+
+/* Hero personal data */
+.cv-hero {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.cv-hero-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.cv-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.cv-hero-info h1 { margin-bottom: 0.2rem; }
+
+.cv-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.1rem;
+}
+
+.cv-personal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+.cv-personal-item {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  align-items: baseline;
+}
+
+.cv-personal-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.cv-personal-label i { color: var(--accent); margin-right: 0.3rem; }
+
+.cv-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.cv-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--surface);
+  transition: all var(--ease);
+  box-shadow: var(--shadow);
+}
+.cv-profile-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+.cv-profile-btn i { color: var(--accent); font-size: 0.85rem; }
+
+/* Education cards */
+.cv-edu-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy-mid);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+  transition: all var(--ease);
+}
+.cv-edu-card:hover {
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.cv-edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-edu-degree {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.cv-edu-institution {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.cv-edu-dates {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cv-edu-meta {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cv-edu-thesis {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.cv-edu-thesis-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.cv-edu-thesis-title {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.cv-edu-thesis-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.cv-edu-thesis-sup {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Experience & volunteering cards */
+.cv-exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy-mid);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.6rem;
+  box-shadow: var(--shadow);
+  transition: all var(--ease);
+}
+.cv-exp-card:hover {
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.cv-exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cv-exp-role {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.cv-exp-employer {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.cv-exp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.cv-exp-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid rgba(200,134,10,0.25);
+}
+
+.cv-exp-dates {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.cv-exp-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Languages */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.lang-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow);
+  transition: all var(--ease);
+}
+.lang-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.lang-name {
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'DM Serif Display', serif;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.lang-level {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.lang-cert {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Responsive CV */
+@media (max-width: 640px) {
+  .cv-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .cv-hero-photo {
+    margin: 0 auto;
+  }
+  .cv-personal-item {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .cv-personal-label { min-width: unset; }
+  .cv-profiles { justify-content: center; }
+  .cv-exp-header { flex-direction: column; }
+  .cv-exp-meta { align-items: flex-start; }
+  .cv-edu-header { flex-direction: column; }
+}

@@ -4,105 +4,189 @@ title: Curriculum Vitae
 permalink: /curriculumvitae/
 ---
 
-<div class="fade-in">
-  <h1>Curriculum Vitae</h1>
-  <p style="color:var(--text-muted);">
-    <a href="mailto:felixdelgado@ugr.es">felixdelgado@ugr.es</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://orcid.org/0000-0003-3494-9487" target="_blank">ORCID</a>
-    &nbsp;&middot;&nbsp;
-    <a href="https://scholar.google.es/citations?user=jm6kFfUAAAAJ" target="_blank">Google Scholar</a>
-  </p>
+<!-- PERSONAL DATA -->
+<div class="cv-hero fade-in">
+  <div class="cv-hero-photo">
+    <img src="{{ '/assets/img/profile.png' | relative_url }}" alt="Félix Delgado-Ferro">
+  </div>
+  <div class="cv-hero-info">
+    <h1>{{ site.data.cv.personal.name }}</h1>
+    <p class="cv-subtitle">PhD Student in Telecommunication Engineering</p>
+    <p class="cv-subtitle">Wireless &amp; Multimedia Networking Lab · University of Granada</p>
+
+    <div class="cv-personal-grid">
+      <div class="cv-personal-item">
+        <span class="cv-personal-label"><i class="fas fa-birthday-cake"></i> Date of birth</span>
+        <span>{{ site.data.cv.personal.birthday }}</span>
+      </div>
+      <div class="cv-personal-item">
+        <span class="cv-personal-label"><i class="fas fa-map-marker-alt"></i> Place of birth</span>
+        <span>{{ site.data.cv.personal.birthplace }}</span>
+      </div>
+      <div class="cv-personal-item">
+        <span class="cv-personal-label"><i class="fas fa-envelope"></i> Email</span>
+        <span><a href="mailto:{{ site.data.cv.personal.email }}">{{ site.data.cv.personal.email }}</a></span>
+      </div>
+    </div>
+
+    <div class="cv-profiles">
+      {% for p in site.data.cv.personal.profiles %}
+      <a href="{{ p.url }}" target="_blank" class="cv-profile-btn">
+        <i class="{{ p.icon }}"></i> {{ p.name }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
+<hr>
+
+<!-- ABOUT -->
 <div class="home-section fade-in">
   <div class="section-label">About</div>
   <p>
-    I am a PhD Student at the Department of Signal Theory, Telematics and Communications
-    of the University of Granada. My research focuses on wireless networks and mobile
-    communications, particularly in the context of IoT and beyond 5G/6G systems.
+    I received the B.Sc. and M.Sc. degrees in Telecommunication Engineering from the
+    University of Granada, Spain, in 2020 and 2022. I am currently pursuing the Doctoral
+    degree with the <strong>Wireless and Multimedia Networking Lab</strong> Research Group,
+    Department of Signal Theory, Telematics, and Communications, under the supervision of
+    Prof. Juan M. Lopez-Soler and Prof. Jorge Navarro-Ortiz.
+    My current research interests include multipath protocols, heterogeneous networks,
+    and optimization techniques for IoT, 5G, and 6G networks.
   </p>
-  <p>
-    In 2023, I was a visiting doctoral researcher at
-    <strong>Simula Research Laboratory, University of Oslo</strong>, Norway.
-  </p>
-</div>
-
-<div class="home-section fade-in">
-  <div class="section-label">Research Interests</div>
-  <ul class="interests-list">
-    <li>LPWAN &amp; IoT (LoRaWAN)</li>
-    <li>5G / 6G Networks</li>
-    <li>Network Slicing &amp; SDN/NFV</li>
-    <li>AI/ML for Networking</li>
-    <li>Multipath &amp; Heterogeneous Networks</li>
-    <li>Low-latency Communications</li>
-    <li>Non-terrestrial Networks</li>
-  </ul>
 </div>
 
 <hr>
 
+<!-- EDUCATION -->
 <div class="home-section fade-in">
   <div class="section-label">Education</div>
-  <ul class="timeline">
-    <li>
-      <div class="tl-degree">Ph.D. in Telecommunication Engineering <em>(ongoing)</em></div>
-      <div class="tl-meta">University of Granada &middot; 2022 &ndash; present</div>
-    </li>
-    <li>
-      <div class="tl-degree">M.Sc. in Telecommunication Engineering</div>
-      <div class="tl-meta">University of Granada &middot; 2022</div>
-    </li>
-    <li>
-      <div class="tl-degree">B.Sc. in Telecommunication Engineering</div>
-      <div class="tl-meta">University of Granada &middot; 2020</div>
-    </li>
-  </ul>
+  {% for e in site.data.cv.education %}
+  <div class="cv-edu-card">
+    <div class="cv-edu-header">
+      <div>
+        <div class="cv-edu-degree">{{ e.degree }}</div>
+        <div class="cv-edu-institution">{{ e.institution }} · {{ e.location }}</div>
+      </div>
+      <div class="cv-edu-dates">
+        {{ e.start }} – {% if e.status == "ongoing" %}<span style="color:var(--accent)">Present</span>{% else %}{{ e.end }}{% endif %}
+      </div>
+    </div>
+    {% if e.grade != "" %}
+    <div class="cv-edu-meta">
+      <span><i class="fas fa-star" style="color:var(--accent)"></i> GPA: <strong>{{ e.grade }}</strong></span>
+    </div>
+    {% endif %}
+    <div class="cv-edu-thesis">
+      <div class="cv-edu-thesis-label">
+        {% if e.status == "ongoing" %}Doctoral Thesis{% elsif e.degree contains "M.Sc" %}M.Sc. Thesis{% else %}B.Sc. Thesis{% endif %}
+      </div>
+      <div class="cv-edu-thesis-title">"{{ e.thesis_title }}"</div>
+      <div class="cv-edu-thesis-desc">{{ e.thesis_description }}</div>
+      <div class="cv-edu-thesis-sup">Supervisor(s): {{ e.supervisors }}</div>
+      {% if e.thesis_doc != "" %}
+      <a class="pdf-btn" href="{{ e.thesis_doc }}" target="_blank" style="margin-top:0.5rem;display:inline-flex;">
+        <i class="fas fa-file-pdf"></i> Download
+      </a>
+      {% else %}
+      <span class="pdf-placeholder" style="margin-top:0.4rem;display:inline-block;">(document pending)</span>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
 </div>
 
 <hr>
 
+<!-- PROFESSIONAL EXPERIENCE -->
 <div class="home-section fade-in">
   <div class="section-label">Professional Experience</div>
-  <ul class="timeline">
-    <li>
-      <div class="tl-degree">Doctoral Researcher</div>
-      <div class="tl-meta">Wireless &amp; Multimedia Networking Lab, University of Granada &middot; 2022 &ndash; present</div>
-    </li>
-    <li>
-      <div class="tl-degree">Visiting Doctoral Researcher</div>
-      <div class="tl-meta">Simula Research Laboratory, University of Oslo &middot; Autumn 2023</div>
-    </li>
-  </ul>
+  <div class="pub-timeline">
+    {% for e in site.data.cv.experience %}
+    <div class="pub-year-marker">
+      <span class="pub-year-dot"></span>
+      <span class="pub-year-label">{{ e.start }}</span>
+    </div>
+    <div class="cv-exp-card">
+      <div class="cv-exp-header">
+        <div>
+          <div class="cv-exp-role">{{ e.role }}</div>
+          <div class="cv-exp-employer">{{ e.employer }} · {{ e.location }}</div>
+        </div>
+        <div class="cv-exp-meta">
+          <span class="cv-exp-type">{{ e.type }}</span>
+          <span class="cv-exp-dates">{{ e.start }} – {% if e.end != "" %}{{ e.end }}{% else %}Present{% endif %}</span>
+        </div>
+      </div>
+      <p class="cv-exp-desc">{{ e.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 <hr>
 
+<!-- VOLUNTEERING -->
 <div class="home-section fade-in">
-  <div class="section-label">Selected Publications</div>
-
-  <div class="publication-card">
-    <div class="pub-title">Unleashing 5G Seamless Integration With TSN for Industry 5.0</div>
-    <div class="pub-authors">O. Adamuz-Hinojosa, F. Delgado-Ferro et al.</div>
-    <div class="pub-venue">IEEE Open Journal of Communications Society &middot; 2025 <span class="pub-quartile">Q1</span></div>
+  <div class="section-label">Volunteering</div>
+  <div class="pub-timeline">
+    {% for v in site.data.cv.volunteering %}
+    <div class="pub-year-marker">
+      <span class="pub-year-dot"></span>
+      <span class="pub-year-label">{{ v.start }}</span>
+    </div>
+    <div class="cv-exp-card">
+      <div class="cv-exp-header">
+        <div>
+          <div class="cv-exp-role">{{ v.role }}</div>
+          <div class="cv-exp-employer">{{ v.organization }} · {{ v.location }}</div>
+        </div>
+        <div class="cv-exp-meta">
+          <span class="cv-exp-dates">{{ v.start }}{% if v.end != "" %} – {{ v.end }}{% endif %}</span>
+        </div>
+      </div>
+      <p class="cv-exp-desc">{{ v.description }}</p>
+    </div>
+    {% endfor %}
   </div>
-
-  <div class="publication-card">
-    <div class="pub-title">An Optimization Model for Resource Allocation in Multi-Tenant LoRaWAN Scenarios</div>
-    <div class="pub-authors">N. Chinchilla-Romero, J. Prados-Garzon, F. Delgado-Ferro et al.</div>
-    <div class="pub-venue">IEEE Internet of Things Journal &middot; 2025 <span class="pub-quartile">Q1</span></div>
-  </div>
-
-  <p style="margin-top:0.75rem;font-size:0.88rem;"><a href="/publications/">Full list of publications &rarr;</a></p>
 </div>
 
 <hr>
 
+<!-- CERTIFICATIONS -->
+<div class="home-section fade-in">
+  <div class="section-label">Certifications &amp; Awards</div>
+  <div class="training-grid">
+    {% for c in site.data.cv.certifications %}
+    <div class="training-card">
+      <div class="training-title">{{ c.title }}</div>
+      <div class="training-meta">
+        <span><i class="fas fa-building"></i> {{ c.issuer }}</span>
+        <span><i class="fas fa-calendar"></i> {{ c.date }}</span>
+        {% if c.credential != "" %}
+        <a href="{{ c.credential }}" target="_blank" style="color:var(--accent);font-size:0.78rem;">
+          <i class="fas fa-external-link-alt"></i> Credential
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr>
+
+<!-- LANGUAGES -->
 <div class="home-section fade-in">
   <div class="section-label">Languages</div>
-  <ul class="project-list">
-    <li>Spanish &mdash; Native</li>
-    <li>English &mdash; B2</li>
-  </ul>
+  <div class="lang-grid">
+    {% for l in site.data.cv.languages %}
+    <div class="lang-card">
+      <div class="lang-name">{{ l.language }}</div>
+      <div class="lang-level">{{ l.level }}</div>
+      {% if l.cert != "" %}
+      <div class="lang-cert">{{ l.cert }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
 </div>
