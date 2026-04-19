@@ -109,7 +109,7 @@ bsc_theses:
     year: 2024
     supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
     status: "completed"
-    doc: ""  
+    doc: "/assets/docs/theses/tfg_jggvm.pdf"  
 
   - student: "J. Jimenez-Gonzalez"
     title: "Configuration and performance assessment of 4G/5G networks"
