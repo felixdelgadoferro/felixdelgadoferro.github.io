@@ -25,18 +25,18 @@ msc_theses:
     degree: "M.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2025
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "mark"
-    doc: ""
+    doc: "/assets/docs/theses/tfm_aob.pdf"
 
   - student: "A. Gomez-Hurtado"
     title: "Synchronization between UE and gNB in 5G networks"
     degree: "M.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2025
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "completed"
-    doc: ""
+    doc: "/assets/docs/theses/tfm_agh.pdf"
 
 bsc_theses:
   - student: "A. D. Ruiz-Ustimova"
@@ -44,7 +44,7 @@ bsc_theses:
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2026
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "ongoing"
     doc: ""
 
@@ -53,7 +53,7 @@ bsc_theses:
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2026
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "ongoing"
     doc: ""
     
@@ -62,7 +62,7 @@ bsc_theses:
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2026
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. M. Lopez-Soler"
+    supervisors: "F. Delgado-Ferro and J. M. Lopez-Soler"
     status: "ongoing"
     doc: ""    
 
@@ -71,7 +71,7 @@ bsc_theses:
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2026
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. M. Lopez-Soler"
+    supervisors: "F. Delgado-Ferro and J. M. Lopez-Soler"
     status: "ongoing"
     doc: ""   
 
@@ -80,7 +80,7 @@ bsc_theses:
   #  degree: "B.Sc. Telecommunications Engineering"
   #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
   #  year: 2026
-  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  supervisors: "F. Delgado-Ferro and J. J. Ramos-Muñoz"
   #  status: "ongoing"
   #  doc: "" 
 
@@ -89,7 +89,7 @@ bsc_theses:
   #  degree: "B.Sc. Telecommunications Engineering"
   #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
   #  year: 2026
-  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  supervisors: "F. Delgado-Ferro and J. J. Ramos-Muñoz"
   #  status: "ongoing"
   #  doc: "" 
 
@@ -98,16 +98,16 @@ bsc_theses:
     degree: "B.Sc. Computer Science Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2025
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "completed"
-    doc: "" 
+    doc: "/assets/docs/theses/tfg_jamp.pdf" 
 
   - student: "J. G. Garcia-Valdecasas-Mendoza"
     title: "Integration of LoRaWAN and 5G networks"
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2024
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "completed"
     doc: "/assets/docs/theses/tfg_jggvm.pdf"  
 
@@ -116,31 +116,31 @@ bsc_theses:
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2023
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "completed"
-    doc: ""  
+    doc: "/assets/docs/theses/tfg_jjg.pdf"  
 
   - student: "A. Oliver-Boada"
     title: "Configuration and usage of MPTCP in mobile devices"
     degree: "B.Sc. Telecommunications Engineering"
     school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
     year: 2023
-    supervisors: "F. Delgado-Ferro, Co-supervisors: J. Navarro-Ortiz"
+    supervisors: "F. Delgado-Ferro and J. Navarro-Ortiz"
     status: "mark"
-    doc: ""  
+    doc: "/assets/docs/theses/tfg_aob.pdf"  
 
   #- student: "Fabian "
   #  title: ""
   #  degree: "B.Sc. Telecommunications Engineering"
   #  school: "Higher Technical School of Informatics and Telecommunications, University of Granada"
   #  year: 2026
-  #  supervisors: "F. Delgado-Ferro, Co-supervisors: J. J. Ramos-Muñoz"
+  #  supervisors: "F. Delgado-Ferro and J. J. Ramos-Muñoz"
   #  status: "ongoing"
   #  doc: "" 
 
 innovation_projects:
   - acronym: "INNOVA-RAG"
-    title: "INNOVA-RAG Teaching Innovation Project"
+    title: "INNOVA-RAG"
     funder: "University of Granada"
     pis: "P. Muñoz-Luengo"
     start: "2025"
@@ -148,12 +148,13 @@ innovation_projects:
     cert: ""
 
   - acronym: "PLAYROOM"
-    title: "PLAYROOM Teaching Innovation Project"
+    title: "PLAYROOM (cheaP virtuaL reAlitY fRamework fOr classrOoM)"
+    code: "PID-2024-102"
     funder: "University of Granada"
     pis: "J. J. Ramos-Munoz"
     start: "2024"
     end: "2025"
-    cert: ""
+    cert: "/assets/docs/proj_innovation/cert_2024_playroom.pdf"
 
   - acronym: "VALERIE"
     title: "VALERIE (VirtuAL rEality foR teachIng Engineering)"
@@ -162,7 +163,7 @@ innovation_projects:
     pis: "J. J. Ramos-Munoz"
     start: "2022"
     end: "2023"
-    cert: ""
+    cert: "/assets/docs/proj_innovation/cert_2022_valerie.pdf"
 
 educational_conferences:
   - authors: "P. Muñoz Luengo, O. Adamuz Hinojosa, A. Biedma Pérez, J. Caleya-Sánchez, F. Delgado-Ferro, J. E. Díaz Verdejo, J. E. Galeote Cazorla, A. M. Mora García, J. Navarro Ortiz, J. Prados Garzón, J. J. Ramos Muñoz, P. Rodríguez Martín, A. Ruiz Moya, J. F. Valenzuela Valdés"
@@ -187,7 +188,7 @@ dissemination_sessions:
     location: "Granada, Spain"
     year: 2024
     hours: 4
-    link: ""
+    link: "/assets/docs/certs/cert_2024_feriaingenieria.pdf"
   
   - authors: "Felix Delgado-Ferro and Juan J. Ramos-Muñoz"
     title: "Session Mobile Game Development"
@@ -196,13 +197,13 @@ dissemination_sessions:
     location: "Pradollano, Granada, Spain"
     year: 2023
     hours: 4
-    link: ""
+    link: "/assets/docs/certs/cert_2023_unidiversidad.pdf"
 
 training_courses:
   - title: "Digital Education Training program for Lecturers."
     organizer: "Center for the Production of Resources for the Digital University (CEPRUD) at the University of Granada"
     start: "9 Apr. 2026"
-    end: "On going"
+    end: "Ongoing"
     hours: --
     cert: ""
 
@@ -211,19 +212,19 @@ training_courses:
     start: "30 Jan. 2023"
     end: "10 Feb. 2023"
     hours: 35
-    cert: ""
+    cert: "/assets/docs/certs/cert_2023_gamificacion.pdf"
 
   - title: "Workshop on writing scientific papers using LaTeX and version control with Git"
     organizer: "Doctoral School of Science, Technology, and Engineering at the University of Granada"
     start: "7 Mar. 2022"
     end: "21 Mar. 2022"
     hours: 20
-    cert: ""
+    cert: "/assets/docs/certs/cert_2022_latex.pdf"
 
   - title: "VI Workshop on Introduction to University Teaching for Pre-doctoral Faculty Members FPU and FPI"
     organizer: "Office of Quality, Teaching Innovation, and Strategic Planning at the University of Granada"
     start: "20 Jan. 2022"
     end: "21 Jan. 2022"
     hours: 20
-    cert: ""
+    cert: "/assets/docs/certs/cert_2022_fpu.pdf"
 
