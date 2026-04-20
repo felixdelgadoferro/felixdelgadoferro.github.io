@@ -28,7 +28,7 @@ education:
     end: "present"
     status: "ongoing"
     grade: ""
-    thesis_title: "TBD"
+    thesis_title: "Multi-connectivity Solutions and Enhancements for 5G/6G Networks"
     thesis_description: "Doctoral thesis currently under development within the Wireless and Multimedia Networking Lab (TIC-235)."
     thesis_doc: ""
     supervisors: "Prof. Juan M. Lopez-Soler, Prof. Jorge Navarro-Ortiz"
@@ -39,9 +39,9 @@ education:
     start: "2020"
     end: "2022"
     status: "completed"
-    grade: "9.47 / 10"
-    thesis_title: "Multipath Scheduler for Heterogeneous Mobile Networks"
-    thesis_description: "Development of a multi-technology scheduler based on Multi-Path TCP for heterogeneous mobile networks, evaluated over 5G NR, Wi-Fi, and LiFi."
+    grade: "8.79 / 10"
+    thesis_title: "Configuration and Performance Evaluation of 4G/5G Networks"
+    thesis_description: "Development and evaluation of mobile networks such as NB-IoT, LTE-M, 4G LTE and 5G."
     thesis_doc: "https://wpd.ugr.es/~jorgenavarro/thesis/2022_TFM_FelixDelgadoFerro.pdf"
     supervisors: "Prof. Jorge Navarro-Ortiz"
 
@@ -51,10 +51,10 @@ education:
     start: "2016"
     end: "2020"
     status: "completed"
-    grade: "8.77 / 10"
-    thesis_title: "LoRaWAN Network Architecture for Environments Without Coverage"
-    thesis_description: "Design and pilot trials of a LoRaWAN architecture for IoT communications in areas without network coverage, deployed using real hardware."
-    thesis_doc: ""
+    grade: "8.629 / 10"
+    thesis_title: "Interconnection of Members of an Emergency Response Team in Areas Without Coverage Using Mobile Devices"
+    thesis_description: "Design and pilot trials of a LoRaWAN architecture for IoT communications in areas without network coverage, deployed using real hardware. This thesis obtained the highest possible mark and was granted the first position in the 8th edition of the B.Sc. Thesis Awards of the Dpt. Signal Theory, Telematics and Communications of the University of Granada in the category of Telematics Engineering. In addition, it was granted the second position (“accesit”) in the Ingenio Awards 2020 from the Andalusian Official Association of B.Sc. Telecommunications Engineers and the third position in the Excellence in Telecommunications Engineering Awards 2021 from the Spanish Official Association of Telecommunications Engineers."
+    thesis_doc: "https://wpd.ugr.es/~jorgenavarro/thesis/2020_TFG_FelixDelgadoFerro.pdf"
     supervisors: "Prof. Jorge Navarro-Ortiz"
 
 experience:
@@ -74,6 +74,14 @@ experience:
     end: "November 2021"
     description: "Research contract funded by the Garantía Juvenil programme, contributing to ongoing research projects within the Wireless and Multimedia Networking Lab."
 
+  - role: "Research Fellow (Collaboration Grant)"
+    type: "Full-time"
+    employer: "University of Granada"
+    location: "Granada, Spain"
+    start: "October 2020"
+    end: "Moy 2021"
+    description: "Research collaboration funded by Collaboration Grant from the Ministry of Education, Professional Training, and Sports, contributing to ongoing research projects within the Wireless and Multimedia Networking Lab."
+
   - role: "Research Assistant"
     type: "Part-time"
     employer: "University of Granada"
@@ -88,7 +96,16 @@ experience:
     location: "Granada, Spain"
     start: "2019"
     end: "2020"
-    description: "Development of IoT-based monitoring modules using Python as part of the H2 Simulator undergraduate internship project."
+    description: "Development of IoT-based monitoring modules using Python as part of the H2 Simulator project."
+
+  - role: "Research Fellow (Research Initiation Grant)"
+    type: "Full-time"
+    employer: "University of Granada"
+    location: "Granada, Spain"
+    start: "October 2020"
+    end: "Moy 2021"
+    description: "Research collaboration funded by Research Initiation Grant from the University of Granada, contributing to ongoing research projects within the Wireless and Multimedia Networking Lab."
+
 
 volunteering:
   - role: "Civil Protection Volunteer"

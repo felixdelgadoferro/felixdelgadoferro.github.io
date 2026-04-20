@@ -107,7 +107,7 @@ permalink: /teaching/
           {% if t.status == "mark" %}
           <div class="project-detail">
             <span class="detail-label">Status</span>
-            <span style="color:var(--accent);font-weight:600;">This bachelor thesis obtained the highest possible mark.</span>
+            <span style="color:var(--accent);font-weight:600;">This M.SC thesis obtained the highest possible mark.</span>
           </div>    
           {% endif %}
           
@@ -233,7 +233,7 @@ permalink: /teaching/
       {% if p.cert != "" %}
       <div class="project-detail">
         <span class="detail-label">Certificate</span>
-        <a class="pdf-btn" href="{{ '/assets/docs/proj_innovation/' | append: p.cert | relative_url }}" target="_blank">
+        <a class="pdf-btn" href="{{ '/assets/docs/projects/' | append: p.cert | relative_url }}" target="_blank">
           <i class="fas fa-file-pdf"></i> Certificate
         </a>
       </div>
