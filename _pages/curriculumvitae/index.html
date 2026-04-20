@@ -190,23 +190,46 @@ permalink: /curriculumvitae/
 
 <!-- CERTIFICATIONS -->
 <div class="home-section fade-in">
-  <div class="section-label">Certifications &amp; Awards</div>
-  <div class="training-grid">
-    {% for c in site.data.cv.certifications %}
-    <div class="training-card">
-      <div class="training-title">{{ c.title }}</div>
-      <div class="training-meta">
-        <span><i class="fas fa-building"></i> {{ c.issuer }}</span>
-        <span><i class="fas fa-calendar"></i> {{ c.date }}</span>
+  <div class="section-label">Certifications &amp; Seminars</div>
+  {% assign certs_sorted = site.data.cv.certifications | sort: "end" | reverse %}
+  {% for c in certs_sorted %}
+  <div class="project-card">
+    <button class="project-header" onclick="toggleProject(this)">
+      <div class="project-header-left">
+        <span class="project-acronym">{{ c.end }}</span>
+        <span class="project-title-short">{{ c.title }}</span>
+      </div>
+      <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+    </button>
+    <div class="project-body">
+      <div class="project-detail">
+        <span class="detail-label">Title</span> {{ c.title }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Organization</span> {{ c.organization }}
+      </div>
+      <div class="project-detail">
+        <span class="detail-label">Period</span>
+        {{ c.start }}{% if c.end != c.start %} – {{ c.end }}{% endif %}
+      </div>
+      {% if c.hours != "" %}
+      <div class="project-detail">
+        <span class="detail-label">Hours</span> {{ c.hours }}h
+      </div>
+      {% endif %}
+      <div class="project-detail">
+        <span class="detail-label">Credential</span>
         {% if c.credential != "" %}
-        <a href="{{ c.credential }}" target="_blank" style="color:var(--accent);font-size:0.78rem;">
-          <i class="fas fa-external-link-alt"></i> Credential
+        <a class="pdf-btn" href="{{ c.credential }}" target="_blank">
+          <i class="fas fa-external-link-alt"></i> View credential
         </a>
+        {% else %}
+        <span class="pdf-placeholder">(pending)</span>
         {% endif %}
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
 </div>
 
 <hr>
