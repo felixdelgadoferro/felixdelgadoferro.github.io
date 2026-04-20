@@ -196,8 +196,8 @@ permalink: /curriculumvitae/
   <div class="project-card">
     <button class="project-header" onclick="toggleProject(this)">
       <div class="project-header-left">
-        <span class="project-acronym">{{ c.end }}</span>
-        <span class="project-title-short">{{ c.title }}</span>
+        <span class="project-acronym">{{ c.title }}</span>
+        <span class="project-title-short">{{ c.start }}{% if c.end != c.start %} – {{ c.end }}{% endif %}</span>
       </div>
       <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
     </button>
