@@ -88,7 +88,7 @@ experience:
     location: "Granada, Spain"
     start: "February 2021"
     end: "March 2021"
-    description: "Short-term research contract within a funded research project at the Department of Signal Theory, Telematics and Communications."
+    description: "Short-term research contract within a funded research project within the Wireless and Multimedia Networking Lab."
 
   - role: "IoT Developer Intern (Python)"
     type: "Internship"
@@ -130,20 +130,19 @@ volunteering:
     description: "Volunteer monitor at a summer camp for young people, contributing to recreational and educational activities."
 
 certifications:
-  - title: "Fundamentals of Deep Learning"
-    issuer: "NVIDIA Deep Learning Institute"
-    date: "2023"
+  - title: "Massive Online Open Course: Machine Learning y Big Data para Bioinformática. 2ª Edición"
+    organization: " Centre for the Production of Resources for the Digital University at the University of Granada"
+    start: "May 2022"
+    end: "April 2022"
+    hours: ""
     credential: ""
 
-  #- title: "Cambridge English: B2 First (FCE)"
-  #  issuer: "Cambridge Assessment English"
-  #  date: "2017"
-  #  credential: ""
-
-  #- title: "Add further certifications from LinkedIn here"
-  #  issuer: "Issuing body"
-  #  date: "YYYY"
-  #  credential: ""
+  - title: "Massive Online Open Course: Machine Learning y Big Data para Bioinformática. 2ª Edición"
+    organization: " Centre for the Production of Resources for the Digital University at the University of Granada"
+    start: "May 2022"
+    end: "April 2022"
+    hours: ""
+    credential: ""
 
 languages:
   - language: "Spanish"

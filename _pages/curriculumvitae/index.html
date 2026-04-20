@@ -119,24 +119,35 @@ permalink: /curriculumvitae/
   <div class="section-label">Professional Experience</div>
   <div class="pub-timeline">
     {% for e in site.data.cv.experience %}
-    <div class="pub-year-marker">
-      <span class="pub-year-dot"></span>
-      <span class="pub-year-label">{{ e.start }}</span>
+<div class="project-card" style="margin-bottom:0.6rem;">
+  <button class="project-header" onclick="toggleProject(this)">
+    <div class="project-header-left">
+      <span class="project-acronym"> {{ e.role }} </span>
+      <span class="project-title-short"> {{ e.employer }} · {{ e.start }} – {% if e.end != "" %}{{ e.end }}{% else %}Present{% endif %}</span>
     </div>
-    <div class="cv-exp-card">
-      <div class="cv-exp-header">
-        <div>
-          <div class="cv-exp-role">{{ e.role }}</div>
-          <div class="cv-exp-employer">{{ e.employer }} · {{ e.location }}</div>
-        </div>
-        <div class="cv-exp-meta">
-          <span class="cv-exp-type">{{ e.type }}</span>
-          <span class="cv-exp-dates">{{ e.start }} – {% if e.end != "" %}{{ e.end }}{% else %}Present{% endif %}</span>
-        </div>
-      </div>
-      <p class="cv-exp-desc">{{ e.description }}</p>
+    <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+  </button>
+  <div class="project-body">
+    <div class="project-detail">
+      <span class="detail-label">Role</span> {{ e.role }}
     </div>
-    {% endfor %}
+    <div class="project-detail">
+      <span class="detail-label">Employer</span> {{ e.employer }}, {{ e.location }}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Period</span>
+      {{ e.start }} – {% if e.end != "" %}{{ e.end }}{% else %}<span style="color:var(--accent)">Present</span>{% endif %}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Type</span>
+      <span class="cv-exp-type">{{ e.type }}</span>
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Description</span> {{ e.description }}
+    </div>
+  </div>
+</div>
+{% endfor %}
   </div>
 </div>
 
@@ -147,23 +158,31 @@ permalink: /curriculumvitae/
   <div class="section-label">Volunteering</div>
   <div class="pub-timeline">
     {% for v in site.data.cv.volunteering %}
-    <div class="pub-year-marker">
-      <span class="pub-year-dot"></span>
-      <span class="pub-year-label">{{ v.start }}</span>
+<div class="project-card" style="margin-bottom:0.6rem;">
+  <button class="project-header" onclick="toggleProject(this)">
+    <div class="project-header-left">
+      <span class="project-acronym"> {{ v.role }} </span>
+      <span class="project-title-short"> {{ v.organization }} · {{ v.start }}{% if v.end != "" %} – {{ v.end }}{% endif %}</span>
     </div>
-    <div class="cv-exp-card">
-      <div class="cv-exp-header">
-        <div>
-          <div class="cv-exp-role">{{ v.role }}</div>
-          <div class="cv-exp-employer">{{ v.organization }} · {{ v.location }}</div>
-        </div>
-        <div class="cv-exp-meta">
-          <span class="cv-exp-dates">{{ v.start }}{% if v.end != "" %} – {{ v.end }}{% endif %}</span>
-        </div>
-      </div>
-      <p class="cv-exp-desc">{{ v.description }}</p>
+    <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+  </button>
+  <div class="project-body">
+    <div class="project-detail">
+      <span class="detail-label">Role</span> {{ v.role }}
     </div>
-    {% endfor %}
+    <div class="project-detail">
+      <span class="detail-label">Organization</span> {{ v.organization }}, {{ v.location }}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Period</span>
+      {{ v.start }}{% if v.end != "" %} – {{ v.end }}{% endif %}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Description</span> {{ v.description }}
+    </div>
+  </div>
+</div>
+{% endfor %}
   </div>
 </div>
 
