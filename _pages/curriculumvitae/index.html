@@ -63,38 +63,53 @@ permalink: /curriculumvitae/
 <div class="home-section fade-in">
   <div class="section-label">Education</div>
   {% for e in site.data.cv.education %}
-  <div class="cv-edu-card">
-    <div class="cv-edu-header">
-      <div>
-        <div class="cv-edu-degree">{{ e.degree }}</div>
-        <div class="cv-edu-institution">{{ e.institution }} · {{ e.location }}</div>
-      </div>
-      <div class="cv-edu-dates">
-        {{ e.start }} – {% if e.status == "ongoing" %}<span style="color:var(--accent)">Present</span>{% else %}{{ e.end }}{% endif %}
-      </div>
+<div class="project-card">
+  <button class="project-header" onclick="toggleProject(this)">
+    <div class="project-header-left">
+      <span class="project-acronym">
+        {{ e.degree }}
+        
+      </span>
+      <span class="project-title-short"> {{ e.institution }} · {{ e.start }} – {% if e.status == "ongoing" %}Present{% else %}{{ e.end }}{% endif %}</span>
+    </div>
+    <span class="project-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+  </button>
+  <div class="project-body">
+    <div class="project-detail">
+      <span class="detail-label">Degree</span> {{ e.degree }}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Institution</span> {{ e.institution }}, {{ e.location }}
+    </div>
+    <div class="project-detail">
+      <span class="detail-label">Period</span>
+      {{ e.start }} – {% if e.status == "ongoing" %}<span style="color:var(--accent)">Present</span>{% else %}{{ e.end }}{% endif %}
     </div>
     {% if e.grade != "" %}
-    <div class="cv-edu-meta">
-      <span><i class="fas fa-star" style="color:var(--accent)"></i> GPA: <strong>{{ e.grade }}</strong></span>
+    <div class="project-detail">
+      <span class="detail-label">GPA</span> {{ e.grade }}
     </div>
     {% endif %}
-    <div class="cv-edu-thesis">
-      <div class="cv-edu-thesis-label">
+    <div class="project-detail">
+      <span class="detail-label">Supervisor(s)</span> {{ e.supervisors }}
+    </div>
+    <div class="project-detail" style="flex-direction:column;gap:0.3rem;">
+      <span class="detail-label">
         {% if e.status == "ongoing" %}Doctoral Thesis{% elsif e.degree contains "M.Sc" %}M.Sc. Thesis{% else %}B.Sc. Thesis{% endif %}
-      </div>
-      <div class="cv-edu-thesis-title">"{{ e.thesis_title }}"</div>
-      <div class="cv-edu-thesis-desc">{{ e.thesis_description }}</div>
-      <div class="cv-edu-thesis-sup">Supervisor(s): {{ e.supervisors }}</div>
+      </span>
+      <span style="font-weight:600;font-size:0.88rem;">"{{ e.thesis_title }}"</span>
+      <span style="font-size:0.82rem;color:var(--text-muted);">{{ e.thesis_description }}</span>
       {% if e.thesis_doc != "" %}
-      <a class="pdf-btn" href="{{ e.thesis_doc }}" target="_blank" style="margin-top:0.5rem;display:inline-flex;">
+      <a class="pdf-btn" href="{{ e.thesis_doc }}" target="_blank" style="margin-top:0.3rem;">
         <i class="fas fa-file-pdf"></i> Download
       </a>
       {% else %}
-      <span class="pdf-placeholder" style="margin-top:0.4rem;display:inline-block;">(document pending)</span>
+      <span class="pdf-placeholder">(document pending)</span>
       {% endif %}
     </div>
   </div>
-  {% endfor %}
+</div>
+{% endfor %}
 </div>
 
 <hr>
