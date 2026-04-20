@@ -3,6 +3,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.author }}">
+  
+  <!-- SEO meta tags -->
+<meta name="keywords" content="Felix Delgado-Ferro, PhD, Telecommunication Engineering, University of Granada, IoT, LoRaWAN, 5G, 6G, multipath, MPTCP, wireless networks, TIC-235">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }} | Félix Delgado-Ferro">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/profile.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title }} | Félix Delgado-Ferro">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/profile.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  
   <title>{% if page.title == "Home" %}{{ site.title }} — Academic Website{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
 
   <!-- Google Fonts — served from Google, not cdnjs, rarely blocked -->
@@ -34,4 +55,26 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Félix Delgado-Ferro",
+  "url": "https://felixdelgadoferro.github.io",
+  "email": "felixdelgado@ugr.es",
+  "jobTitle": "PhD Student in Telecommunication Engineering",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "University of Granada"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/félix-delgado-ferro-71b180aa/",
+    "https://orcid.org/0000-0003-3494-9487",
+    "https://scholar.google.es/citations?user=jm6kFfUAAAAJ",
+    "https://github.com/felixdelgadoferro"
+  ]
+}
+</script>
 </head>
