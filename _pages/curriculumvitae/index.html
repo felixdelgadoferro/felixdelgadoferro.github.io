@@ -220,8 +220,8 @@ permalink: /curriculumvitae/
       <div class="project-detail">
         <span class="detail-label">Credential</span>
         {% if c.credential != "" %}
-        <a class="pdf-btn" href="{{ c.credential }}" target="_blank">
-          <i class="fas fa-external-link-alt"></i> View credential
+        <a class="pdf-btn" href="{{ '/assets/docs/certs/' | append: c.credential | relative_url }}" target="_blank">
+          <i class="fas fa-file-pdf"></i> <span class="pdf-placeholder"> </span>
         </a>
         {% else %}
         <span class="pdf-placeholder">(pending)</span>
